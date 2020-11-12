@@ -121,3 +121,5 @@ class TestOption(BaseOption):
         self.parser.add_argument('--is_train', type=bool, default=False, help='test flag')
         self.parser.add_argument('--iteration', type=bool, default=False, help='if you want to generate from input for the specific iteration')
         self.parser.add_argument('--no_shuffle', type=bool, default=True, help='if you want to shuffle the order')
+        
+#------------------------------------------------------------------------------
