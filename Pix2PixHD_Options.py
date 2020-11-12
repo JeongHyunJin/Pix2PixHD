@@ -28,7 +28,8 @@ class BaseOption(object):
                                  help="Input data extension. This will be used for loading and saving. [tif or npy or fits]")
         self.parser.add_argument('--data_format_target', type=str, default='tif',
                                  help="Target data extension. This will be used for loading and saving. [fits or npy or fits]")
-
+        
+        #----------------------------------------------------------------------
         # data option
         self.parser.add_argument('--dataset_name', type=str, default='Pix2PixHD', help='dataset directory name')
         
@@ -44,7 +45,8 @@ class BaseOption(object):
         self.parser.add_argument('--saturation_upper_limit_input', type=float, default=100, help="Saturation value (upper limit) of input")
         self.parser.add_argument('--saturation_lower_limit_target', type=float, default=1, help="Saturation value (lower limit) of target")
         self.parser.add_argument('--saturation_upper_limit_target', type=float, default=100, help="Saturation value (upper limit) of target")
-
+        #----------------------------------------------------------------------
+        
         # data augmentation
         self.parser.add_argument('--batch_size', type=int, default=1, help='the number of batch_size')
         self.parser.add_argument('--data_type', type=int, default=32, help='float dtype')
@@ -96,9 +98,11 @@ class BaseOption(object):
 class TrainOption(BaseOption):
     def __init__(self):
         super(TrainOption, self).__init__()
-
+        
+        #----------------------------------------------------------------------
         self.parser.add_argument('--input_dir_train', type=str, default='./datasets/Train/Input', help='directory path of the input files for the model training')
         self.parser.add_argument('--target_dir_train', type=str, default='./datasets/Train/Target', help='directory path of the input files for the model training')
+        #----------------------------------------------------------------------
         
         self.parser.add_argument('--is_train', type=bool, default=True, help='train flag')
         self.parser.add_argument('--n_epochs', type=int, default=150, help='how many epochs you want to train')
@@ -122,8 +126,10 @@ class TestOption(BaseOption):
     def __init__(self):
         super(TestOption, self).__init__()
         
+        #----------------------------------------------------------------------
         self.parser.add_argument('--input_dir_test', type=str, default='./datasets/Test/Input', help='directory path of the input files for the model test')
-                
+        #----------------------------------------------------------------------
+        
         self.parser.add_argument('--is_train', type=bool, default=False, help='test flag')
         self.parser.add_argument('--iteration', type=bool, default=False, help='if you want to generate from input for the specific iteration')
         self.parser.add_argument('--no_shuffle', type=bool, default=True, help='if you want to shuffle the order')
