@@ -32,7 +32,7 @@ Prerequisites
       --data_size: 1024 (default)
       
       --logscale_input: False (default)
-      --logscale_target: True (default)
+      --logscale_target: False (default)
       
       --saturation_lower_limit_input: 1 (default)
       --saturation_upper_limit_input: 100 (default)
