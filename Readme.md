@@ -1,6 +1,6 @@
 Pix2PixHD model
 ===============
-The Pix2PixHD is one of the popular deep-learning methods for image translation of high-resolution images without significant artifacts. <br/>
+ The Pix2PixHD is one of the popular deep-learning methods for image translation of high-resolution images without significant artifacts. <br/>
 Here, we modifed the code of the Pix2PixHD to use scientific datasets which have extensions of tif, npy, and fits. 
 
 * Reference <br/>
@@ -11,7 +11,7 @@ Here, we modifed the code of the Pix2PixHD to use scientific datasets which have
 
 Environments
 ------------
-This code has been tested on Ubuntu 18.04 with a Nvidia GeForce GTX Titan XP GPU, CUDA Version 11.0, Python 3.6.9, and PyTorch 1.3.1.
+ This code has been tested on Ubuntu 18.04 with a Nvidia GeForce GTX Titan XP GPU, CUDA Version 11.0, Python 3.6.9, and PyTorch 1.3.1.
 
 <br/>
 
@@ -76,11 +76,11 @@ Getting Started
 <br/>
 
 **Training**    
- You can train the model:
+  You can train the model:
 
-    python train.py
+    python Pix2PixHD_Train.py
 
-* When the model is training, it saves the model with specified intervals as a file with extension .pt or .pth at "./checkpoints/*dataset_name*/Model"
+* When the model is training, it saves the model every step (a step: saving frequency) as a file with extension .pt or .pth at "./checkpoints/*dataset_name*/Model"
 * You can set the saving frequency in *Pix2PixHD_Options.py*. If you define "save_freq" of 10000, for example, a file which have an extension .pt will be saved every 10000 iterations.
 * It will save a pair of images for the Real data and Generated one by the model every specified interation at "./checkpoints/*dataset_name*/Image/Train"
 
@@ -89,11 +89,23 @@ Getting Started
 <br/>
  
 **Test**     
- You can generate data from the inputs by the model or test the model:
+  You can generate data from the inputs by the model or test the model:
  
-    python test.py
+    python Pix2PixHD_Test.py
 
-* It will save the AI-generated data with specified intervals (: saving frequency) at "./checkpoints/*dataset_name*/Image/Test"
+* It will save the AI-generated data every step (a step: saving frequency) at "./checkpoints/*dataset_name*/Image/Test"
 * When you set an iteration in TestOption class of *Pix2PixHD_Options.py*, it saves the generated data by a model which saved before.
 
 <br/>
+
+**Outputs**
+ It will make directories and save outputs like below:
+    
+     * Pix2PixHD_Train:
+        ./chechpoints/*dataset_name*/Image/Train/{iteration_real.png}
+        ./chechpoints/*dataset_name*/Image/Train/{iteration_fake.png}
+        ./chechpoints/*dataset_name*/Model/{iteration_G.pt}
+        ./chechpoints/*dataset_name*/Model/{iteration_D.pt}
+     
+     * Pix2PixHD_Test:
+        ./chechpoints/*dataset_name*/Image/Test/{iteration}/{filename_AI.extension}
