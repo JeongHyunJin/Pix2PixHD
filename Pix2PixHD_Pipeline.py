@@ -32,17 +32,21 @@ class CustomDataset(Dataset):
     def __init__(self, opt):
         super(CustomDataset, self).__init__()
         self.opt = opt
-        dataset_dir = os.path.join('./datasets', opt.dataset_name)
-        self.input_format = opt.data_format_input
-        self.target_format = opt.data_format_target
-
+                
         if opt.is_train:
-            self.label_path_list = sorted(glob(os.path.join(dataset_dir, 'Train', 'Input', '*.' + self.input_format)))
-            self.target_path_list = sorted(glob(os.path.join(dataset_dir, 'Train', 'Target', '*.' + self.target_format)))
+            self.input_format = opt.data_format_input
+            self.target_format = opt.data_format_target
+            self.input_dir = opt.input_dir_train
+            self.target_dir = opt.target_dir_train
 
-        else:
-            self.label_path_list = sorted(glob(os.path.join(dataset_dir, 'Test', 'Input', '*.' + self.input_format)))
+            self.label_path_list = sorted(glob(os.path.join(self.input_dir, '*.' + self.input_format)))
+            self.target_path_list = sorted(glob(os.path.join(self.target_dir, '*.' + self.target_format)))
             
+        else:
+            self.input_format = opt.data_format_input
+            self.input_dir = opt.input_dir_test
+
+            self.label_path_list = sorted(glob(os.path.join(self.input_dir, '*.' + self.input_format)))
             
 
     def __getitem__(self, index):
