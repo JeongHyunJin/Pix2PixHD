@@ -30,6 +30,8 @@ class BaseOption(object):
                                  help="Target data extension. This will be used for loading and saving. [fits or npy or fits]")
 
         # data option
+        self.parser.add_argument('--dataset_name', type=str, default='Pix2PixHD', help='dataset directory name')
+        
         self.parser.add_argument('--input_ch', type=int, default=1, help="# of input channels for Generater")
         self.parser.add_argument('--target_ch', type=int, default=1, help="# of target channels for Generater")
         
@@ -45,7 +47,6 @@ class BaseOption(object):
 
         # data augmentation
         self.parser.add_argument('--batch_size', type=int, default=1, help='the number of batch_size')
-        self.parser.add_argument('--dataset_name', type=str, default='Pix2PixHD', help='dataset directory name')
         self.parser.add_argument('--data_type', type=int, default=32, help='float dtype')
         self.parser.add_argument('--image_mode', type=str, default='png', help='extension for saving image')
         self.parser.add_argument('--n_downsample', type=int, default=2, help='how many times you want to downsample input data in G')
