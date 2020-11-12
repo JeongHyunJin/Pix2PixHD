@@ -63,15 +63,10 @@ class BaseOption(object):
         opt = self.parser.parse_args()
         opt.format = 'png'  # extension for checking image 
         opt.flip = False
-
-        #--------------------------------
-        if opt.data_size >= 1024:
-            opt.n_df = 64
-            opt.n_gf = 32
-        else:
-            opt.n_df = 16
-            opt.n_gf = 8
-            
+        
+        opt.n_df = 64
+        opt.n_gf = 32
+                    
         #--------------------------------
         if opt.data_type == 16:
             opt.eps = 1e-4
