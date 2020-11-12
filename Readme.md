@@ -76,7 +76,7 @@ Getting Started
 <br/>
 
 **Training**    
- You can train the model by typing:
+ You can train the model:
 
     python train.py
 
@@ -89,7 +89,7 @@ Getting Started
 <br/>
  
 **Test**     
- You can generate data from the inputs by the model or test the model by typing:
+ You can generate data from the inputs by the model or test the model:
  
     python test.py
 
