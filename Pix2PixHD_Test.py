@@ -77,7 +77,7 @@ if __name__ == '__main__':
                         np_fake = np_fake.transpose(1, 2 ,0)
                     
                     #--------------------------------------
-                    if opt.logscale_input == True:
+                    if opt.logscale_target == True:
                         np_fake = 10**(np_fake)
                     
                     #--------------------------------------
@@ -120,7 +120,7 @@ if __name__ == '__main__':
                     np_fake = np_fake.transpose(1, 2 ,0)
                 
                 #--------------------------------------
-                if opt.logscale_input == True:
+                if opt.logscale_target == True:
                     np_fake = 10**(np_fake)
                 
                 #--------------------------------------
