@@ -22,7 +22,8 @@ Prerequisites
 
 <br/>
 
-* Flags: see *Pix2PixHD_Options.py* for all the training and test flags.
+* Flags: see *Pix2PixHD_Options.py* for all the training and test flags.     
+>    Before running the model, you have to check the options for the input and target dataset.
      
       # data option
       --input_ch: 1 (default)
