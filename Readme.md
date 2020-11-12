@@ -99,7 +99,7 @@ Getting Started
 <br/>
 
 **Outputs**   
- It will make directories and save outputs like below:
+  It will make directories and save outputs like below:
     
      * Pix2PixHD_Train:
         ./chechpoints/*dataset_name*/Image/Train/{iteration_real.png}
