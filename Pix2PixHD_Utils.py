@@ -107,8 +107,8 @@ class Manager(object):
 
     def save(self, package, image=False, model=False):
         if image:
-            path_real = os.path.join(self.opt.image_dir, str(package['Epoch']) + '_' + 'real.png')
-            path_fake = os.path.join(self.opt.image_dir, str(package['Epoch']) + '_' + 'fake.png')
+            path_real = os.path.join(self.opt.image_dir, str(package['current_step']) + '_' + 'real.png')
+            path_fake = os.path.join(self.opt.image_dir, str(package['current_step']) + '_' + 'fake.png')
             self.save_image(package['target_tensor'], path_real)
             self.save_image(package['generated_tensor'], path_fake)
 
