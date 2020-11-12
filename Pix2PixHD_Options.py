@@ -116,7 +116,7 @@ class TrainOption(BaseOption):
         self.parser.add_argument('--lambda_FM', type=int, default=10, help='weight for FM loss')
         self.parser.add_argument('--lr', type=float, default=0.0002)
         
-        self.parser.add_argument('--report_freq', type=int, default=10)
+        self.parser.add_argument('--report_freq', type=int, default=100)
         self.parser.add_argument('--save_freq', type=int, default=10000)
         self.parser.add_argument('--display_freq', type=int, default=100)
         self.parser.add_argument('--no_shuffle', action='store_true', default=False, help='if you want to shuffle the order')
