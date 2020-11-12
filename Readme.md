@@ -79,6 +79,11 @@ Getting Started
 
     python train.py
 
+* When the model is training, it saves the model for the specific iteration as a file with extension .pt or .pth at "./checkpoints/*dataset_name*/Model"
+* You can set the saving frequency in the *Pix2PixHD_Options.py*. If you define "save_freq" of 10000, for example, a file which have an extension .pt will be saved every 10000 iterations.
+* 
+
+
 
 <br/>
 
