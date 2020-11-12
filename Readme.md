@@ -47,11 +47,16 @@ Prerequisites
 
       #----------------------------------------------------------------------
       # directory path for training in the TrainOption class
-      --input_dir_train: 'Pix2PixHD' (default)
-      
-      
+      --input_dir_train: './datasets/Train/Input' (default)
+      --target_dir_train: './datasets/Train/Target' (default)
       #----------------------------------------------------------------------
-      
+
+      #----------------------------------------------------------------------
+      # directory path for test in the TestOption class
+      --input_dir_train: './datasets/Test/Input' (default)
+      #----------------------------------------------------------------------
+
+
 
 <br/>
 
