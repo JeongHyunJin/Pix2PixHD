@@ -26,6 +26,8 @@ Prerequisites
 >    Before running the model, you have to check or adjust the options for the input and target dataset.
      
       # data option
+      --dataset_name: 'Pix2PixHD' (default)
+      
       --input_ch: 1 (default)
       --target_ch: 1 (default)
       
@@ -46,7 +48,9 @@ Getting Started
 ------------
 
 **Installation**    
+* Install Anaconada from https://docs.anaconda.com/anaconda/install/
 * Install PyTorch and dependencies from http://pytorch.org
+* Install Pillow with pip or conda ( https://pillow.readthedocs.io/en/stable/installation.html )
 
 <br/>
 
