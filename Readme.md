@@ -46,8 +46,10 @@ Prerequisites
 >    And you have to set the pathes of input and target directories.
 
       #----------------------------------------------------------------------
-      # data option in the BaseOption class
-      --dataset_name: 'Pix2PixHD' (default)
+      # directory path for training in the TrainOption class
+      --input_dir_train: 'Pix2PixHD' (default)
+      
+      
       #----------------------------------------------------------------------
       
 
