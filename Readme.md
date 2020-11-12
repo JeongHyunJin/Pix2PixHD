@@ -14,6 +14,33 @@ This code has been tested on Ubuntu 18.04 with a Nvidia GeForce GTX Titan XP GPU
 
 <br/>
 
+Prerequisites
+------------
+* Linux or macOS
+* Python 3
+* NVIDIA GPU + CUDA cuDNN
+
+<br/>
+
+* Flags: see *Pix2PixHD_Options.py* for all the training and test flags.
+     
+      # data option
+      --input_ch: 1 (default)
+      --target_ch: 1 (default)
+      
+      --data_size: 1024 (default)
+      
+      --logscale_input: False (default)
+      --logscale_target: True (default)
+      
+      --saturation_lower_limit_input: 1 (default)
+      --saturation_upper_limit_input: 100 (default)
+      --saturation_lower_limit_target: 1 (default)
+      --saturation_upper_limit_target: 100 (default)
+      
+
+<br/>
+
 Getting Started
 ------------
 
@@ -34,6 +61,6 @@ Getting Started
 
 <br/>
 
-**Testing**     
+**Test**     
     
     python test.py
