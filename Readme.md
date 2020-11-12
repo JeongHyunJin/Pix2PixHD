@@ -17,23 +17,23 @@ This code has been tested on Ubuntu 18.04 with a Nvidia GeForce GTX Titan XP GPU
 Getting Started
 ------------
 
-## Installation  
+**Installation**    
 * Install PyTorch and dependencies from http://pytorch.org
 
 <br/>
 
-## Dataset   
+**Dataset**       
 * You need a large set of input & target image pairs for training.
 
 <br/>
 
-# Training  
+**Training**    
 
     python train.py
 
 
 <br/>
 
-## Testing   
+**Testing**     
     
     python test.py
