@@ -50,7 +50,7 @@ Prerequisites
       
 >    &
 
-      # directory path for test in the TestOption class
+      # directory path for test in TestOption class
       --input_dir_test: './datasets/Test/Input' (default)
       
 
