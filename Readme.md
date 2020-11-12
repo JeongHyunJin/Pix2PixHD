@@ -76,17 +76,24 @@ Getting Started
 <br/>
 
 **Training**    
+ You can train the model by typing:
 
     python train.py
 
-* When the model is training, it saves the model for the specific iteration as a file with extension .pt or .pth at "./checkpoints/*dataset_name*/Model"
-* You can set the saving frequency in the *Pix2PixHD_Options.py*. If you define "save_freq" of 10000, for example, a file which have an extension .pt will be saved every 10000 iterations.
-* 
+* When the model is training, it saves the model with specified intervals as a file with extension .pt or .pth at "./checkpoints/*dataset_name*/Model"
+* You can set the saving frequency in *Pix2PixHD_Options.py*. If you define "save_freq" of 10000, for example, a file which have an extension .pt will be saved every 10000 iterations.
+* It will save a pair of images for the Real data and Generated one by the model every specified interation at "./checkpoints/*dataset_name*/Image/Train"
 
 
 
 <br/>
-
+ 
 **Test**     
-    
+ You can generate data from the inputs by the model or test the model by typing:
+ 
     python test.py
+
+* It will save the AI-generated data with specified intervals (: saving frequency) at "./checkpoints/*dataset_name*/Image/Test"
+* When you set an iteration in TestOption class of *Pix2PixHD_Options.py*, it saves the generated data by a model which saved before.
+
+<br/>
