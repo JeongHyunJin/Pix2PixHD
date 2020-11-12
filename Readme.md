@@ -98,7 +98,7 @@ Getting Started
 
 <br/>
 
-**Outputs**
+**Outputs**   
  It will make directories and save outputs like below:
     
      * Pix2PixHD_Train:
