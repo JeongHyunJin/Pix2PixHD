@@ -100,6 +100,7 @@ class TrainOption(BaseOption):
         super(TrainOption, self).__init__()
         
         #----------------------------------------------------------------------
+        # directory path for training
         self.parser.add_argument('--input_dir_train', type=str, default='./datasets/Train/Input', help='directory path of the input files for the model training')
         self.parser.add_argument('--target_dir_train', type=str, default='./datasets/Train/Target', help='directory path of the input files for the model training')
         #----------------------------------------------------------------------
@@ -127,6 +128,7 @@ class TestOption(BaseOption):
         super(TestOption, self).__init__()
         
         #----------------------------------------------------------------------
+        # directory path for test
         self.parser.add_argument('--input_dir_test', type=str, default='./datasets/Test/Input', help='directory path of the input files for the model test')
         #----------------------------------------------------------------------
         
