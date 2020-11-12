@@ -25,7 +25,8 @@ Prerequisites
 * Flags: see *Pix2PixHD_Options.py* for all the training and test flags.     
 >    Before running the model, you have to check or adjust the options for the input and target dataset.
      
-      # data option
+      #----------------------------------------------------------------------
+      # data option in the BaseOption class
       --dataset_name: 'Pix2PixHD' (default)
       
       --input_ch: 1 (default)
@@ -40,6 +41,14 @@ Prerequisites
       --saturation_upper_limit_input: 100 (default)
       --saturation_lower_limit_target: 1 (default)
       --saturation_upper_limit_target: 100 (default)
+      #----------------------------------------------------------------------
+
+>    And you have to set the pathes of input and target directories.
+
+      #----------------------------------------------------------------------
+      # data option in the BaseOption class
+      --dataset_name: 'Pix2PixHD' (default)
+      #----------------------------------------------------------------------
       
 
 <br/>
