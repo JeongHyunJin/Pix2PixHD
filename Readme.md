@@ -56,6 +56,8 @@ Getting Started
 
 **Dataset**       
 * You need a large set of input & target image pairs for training.
+* The input and target should be same pixel size.
+* The size of height and width should be same. If your datasets are not square, you have to do cropping the data or padding before the training.
 
 <br/>
 
