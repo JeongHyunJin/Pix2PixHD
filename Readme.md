@@ -11,7 +11,7 @@ Here, we modifed the code of the Pix2PixHD to use scientific datasets which have
 
 Environments
 ------------
- This code has been tested on Ubuntu 18.04 with a Nvidia GeForce GTX Titan XP GPU, CUDA Version 11.0, Python 3.6.9, and PyTorch 1.3.1.
+  This code has been tested on Ubuntu 18.04 with a Nvidia GeForce GTX Titan XP GPU, CUDA Version 11.0, Python 3.6.9, and PyTorch 1.3.1.
 
 <br/>
 
@@ -76,7 +76,7 @@ Getting Started
 <br/>
 
 **Training**    
-  You can train the model:
+   You can train the model:
 
     python Pix2PixHD_Train.py
 
@@ -89,7 +89,7 @@ Getting Started
 <br/>
  
 **Test**     
-  You can generate data from the inputs by the model or test the model:
+   You can generate data from the inputs by the model or test the model:
  
     python Pix2PixHD_Test.py
 
@@ -99,13 +99,13 @@ Getting Started
 <br/>
 
 **Outputs**   
-  It will make directories and save outputs like below:
+   It will make directories and save outputs like below:
     
-     * Pix2PixHD_Train:
-        ./chechpoints/*dataset_name*/Image/Train/{iteration_real.png}
-        ./chechpoints/*dataset_name*/Image/Train/{iteration_fake.png}
-        ./chechpoints/*dataset_name*/Model/{iteration_G.pt}
-        ./chechpoints/*dataset_name*/Model/{iteration_D.pt}
+     * Pix2PixHD_Train.py:
+        ./chechpoints/{dataset_name}/Image/Train/{iteration_real.png}
+        ./chechpoints/{dataset_name}/Image/Train/{iteration_fake.png}
+        ./chechpoints/{dataset_name}/Model/{iteration_G.pt}
+        ./chechpoints/{dataset_name}/Model/{iteration_D.pt}
      
-     * Pix2PixHD_Test:
-        ./chechpoints/*dataset_name*/Image/Test/{iteration}/{filename_AI.extension}
+     * Pix2PixHD_Test.py:
+        ./chechpoints/{dataset_name}/Image/Test/{iteration}/{filename_AI.extension}
