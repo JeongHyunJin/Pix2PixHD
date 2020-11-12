@@ -50,6 +50,8 @@ Prerequisites
       --input_dir_train: './datasets/Train/Input' (default)
       --target_dir_train: './datasets/Train/Target' (default)
       #----------------------------------------------------------------------
+      
+<br/>
 
       #----------------------------------------------------------------------
       # directory path for test in the TestOption class
