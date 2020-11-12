@@ -39,9 +39,9 @@ class BaseOption(object):
         self.parser.add_argument('--logscale_target', type=bool, default=False, help="use logarithmic scales to the target data sets")
         
         self.parser.add_argument('--saturation_lower_limit_input', type=float, default=1, help="Saturation value (lower limit) of input")
-        self.parser.add_argument('--saturation_upper_limit_input', type=float, default=200, help="Saturation value (upper limit) of input")
-        self.parser.add_argument('--saturation_lower_limit_target', type=float, default=-3000, help="Saturation value (lower limit) of target")
-        self.parser.add_argument('--saturation_upper_limit_target', type=float, default=3000, help="Saturation value (upper limit) of target")
+        self.parser.add_argument('--saturation_upper_limit_input', type=float, default=100, help="Saturation value (upper limit) of input")
+        self.parser.add_argument('--saturation_lower_limit_target', type=float, default=1, help="Saturation value (lower limit) of target")
+        self.parser.add_argument('--saturation_upper_limit_target', type=float, default=100, help="Saturation value (upper limit) of target")
 
         # data augmentation
         self.parser.add_argument('--batch_size', type=int, default=1, help='the number of batch_size')
