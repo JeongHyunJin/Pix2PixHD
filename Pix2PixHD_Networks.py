@@ -119,7 +119,7 @@ class Discriminator(nn.Module):
         
         for i in range(opt.n_D):
             setattr(self, 'Scale_{}'.format(str(i)), PatchDiscriminator(opt))
-        self.n_D = 2
+        self.n_D = opt.n_D
 
         print(self)
         print("the number of D parameters", sum(p.numel() for p in self.parameters() if p.requires_grad))
@@ -146,7 +146,7 @@ class Loss(object):
 
         self.criterion = nn.MSELoss()
         self.FMcriterion = nn.L1Loss()
-        self.n_D = 2
+        self.n_D = opt.n_D
 
 
     def __call__(self, D, G, input, target):
