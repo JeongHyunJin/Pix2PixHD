@@ -61,7 +61,7 @@ Getting Started
 ------------
 
 **Installation**    
-* Install Anaconada from https://docs.anaconda.com/anaconda/install/
+* Install Anaconada from https://docs.anaconda.com/anaconda/install/ (We use numpy, scipy, astropy, and, random modules)
 * Install PyTorch and dependencies from http://pytorch.org
 * Install Pillow with pip or conda ( https://pillow.readthedocs.io/en/stable/installation.html )
 
