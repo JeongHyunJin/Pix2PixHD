@@ -77,7 +77,7 @@ class CustomDataset(Dataset):
             #--------------------------------------
             if self.logscale_input == True:
                 IMG_A0[np.isnan(IMG_A0)] = 1
-                IMG_A0[IMG_A0 == 1] = 1
+                IMG_A0[IMG_A0 == 0] = 1
                 IMG_A0 = np.log10(IMG_A0)
             else:
                 IMG_A0[np.isnan(IMG_A0)] = 0
