@@ -26,7 +26,7 @@ Prerequisites
 * Flags: see *Pix2PixHD_Options.py* for all the training and test flags.     
 >    Before running the model, you have to check or adjust the options for the input and target datasets.
      
-      # data options in BaseOption class
+      # data option in BaseOption class
       --dataset_name: 'Pix2PixHD' (default)
       
       --input_ch: 1 (default)
