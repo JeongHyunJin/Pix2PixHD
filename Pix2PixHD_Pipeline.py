@@ -75,7 +75,7 @@ class CustomDataset(Dataset):
                 IMG_A0 = IMG_A0.transpose(2, 0 ,1)
             
             #--------------------------------------
-            if self.logscale_input == True:
+            if self.opt.logscale_input == True:
                 IMG_A0[np.isnan(IMG_A0)] = 1
                 IMG_A0[IMG_A0 < 1] = 1
                 IMG_A0 = np.log10(IMG_A0)
@@ -115,7 +115,7 @@ class CustomDataset(Dataset):
                 IMG_B0 = IMG_B0.transpose(2, 0 ,1)
             
             #--------------------------------------
-            if self.logscale_target == True:
+            if self.opt.logscale_target == True:
                 IMG_B0[np.isnan(IMG_B0)] = 1
                 IMG_B0[IMG_B0 < 1] = 1
                 IMG_B0 = np.log10(IMG_B0)
@@ -158,7 +158,7 @@ class CustomDataset(Dataset):
                 IMG_A0 = IMG_A0.transpose(2, 0 ,1)
             
             #--------------------------------------
-            if self.logscale_input == True:
+            if self.opt.logscale_input == True:
                 IMG_A0[np.isnan(IMG_A0)] = 1
                 IMG_A0[IMG_A0 < 1] = 1
                 IMG_A0 = np.log10(IMG_A0)
