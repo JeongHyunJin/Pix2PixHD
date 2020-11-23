@@ -41,7 +41,7 @@ class CustomDataset(Dataset):
 
             self.label_path_list = sorted(glob(os.path.join(self.input_dir, '*.' + self.input_format)))
             self.target_path_list = sorted(glob(os.path.join(self.target_dir, '*.' + self.target_format)))
-            
+            print(len(self.label_path_list), len(self.target_path_list))
         else:
             self.input_format = opt.data_format_input
             self.input_dir = opt.input_dir_test
@@ -70,10 +70,20 @@ class CustomDataset(Dataset):
             else:
                 NotImplementedError("Please check data_format_input option. It has to be tif or npy or fits.")
             
+             
             #--------------------------------------
             if len(IMG_A0.shape) == 3:
                 IMG_A0 = IMG_A0.transpose(2, 0 ,1)
             
+            if self.opt.reference_frame != -1 :
+                IMG_A1 = IMG_A0[:]
+                if self.opt.target_ch != 1 :
+                    IMG_AR0 = IMG_A0[self.opt.reference_frame:self.opt.reference_frame + self.opt.target_ch,:,:]
+                    IMG_A0 = IMG_A0[0:self.opt.reference_frame-1,:,:]
+                else:    
+                    IMG_AR0 = IMG_A0[self.opt.reference_frame,:,:]
+                    IMG_A0 = IMG_A0[0:self.opt.reference_frame-1,:,:]
+                
             #--------------------------------------
             if self.opt.logscale_input == True:
                 IMG_A0[np.isnan(IMG_A0)] = 1
@@ -88,6 +98,29 @@ class CustomDataset(Dataset):
             
             label_array = (np.clip(IMG_A0, LoIA, UpIA)-(UpIA+LoIA)/2)/((UpIA - LoIA)/2)
             
+            if self.opt.reference_frame != -1 :
+                if self.opt.logscale_target == True:
+                    IMG_AR0[np.isnan(IMG_AR0)] = 1
+                    IMG_AR0[IMG_AR0 < 1] = 1
+                    IMG_AR0 = np.log10(IMG_AR0)
+                else:
+                    IMG_AR0[np.isnan(IMG_AR0)] = 0
+                
+                UpIAR = np.float(self.opt.saturation_upper_limit_target)
+                LoIAR = np.float(self.opt.saturation_lower_limit_target)
+                
+                ref_array = (np.clip(IMG_AR0, LoIAR, UpIAR)-(UpIAR+ LoIAR)/2)/((UpIAR - LoIAR)/2)
+                
+                if self.opt.target_ch != 1 :
+                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array[:]
+                    IMG_A1[self.opt.reference_frame:self.opt.reference_frame + self.opt.target_ch,:,:] = ref_array[:]
+
+                else:
+                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array[:]
+                    IMG_A1[self.opt.reference_frame,:,:] = ref_array[:]
+                
+                label_array = IMG_A1[:]
+                
             #--------------------------------------
             label_array = self.__rotate(label_array)
             label_array = self.__pad(label_array, self.opt.padding_size)
@@ -157,6 +190,15 @@ class CustomDataset(Dataset):
             if len(IMG_A0.shape) == 3:
                 IMG_A0 = IMG_A0.transpose(2, 0 ,1)
             
+            if self.opt.reference_frame != -1 :
+                IMG_A1 = IMG_A0[:]
+                if self.opt.target_ch != 1 :
+                    IMG_AR0 = IMG_A0[self.opt.reference_frame:self.opt.reference_frame + self.opt.target_ch,:,:]
+                    IMG_A0 = IMG_A0[0:self.opt.reference_frame-1,:,:]
+                else:    
+                    IMG_AR0 = IMG_A0[self.opt.reference_frame,:,:]
+                    IMG_A0 = IMG_A0[0:self.opt.reference_frame-1,:,:]
+                
             #--------------------------------------
             if self.opt.logscale_input == True:
                 IMG_A0[np.isnan(IMG_A0)] = 1
@@ -170,6 +212,29 @@ class CustomDataset(Dataset):
             LoIA = np.float(self.opt.saturation_lower_limit_input)
             
             label_array = (np.clip(IMG_A0, LoIA, UpIA)-(UpIA+LoIA)/2)/((UpIA - LoIA)/2)
+            
+            if self.opt.reference_frame != -1 :
+                if self.opt.logscale_target == True:
+                    IMG_AR0[np.isnan(IMG_AR0)] = 1
+                    IMG_AR0[IMG_AR0 < 1] = 1
+                    IMG_AR0 = np.log10(IMG_AR0)
+                else:
+                    IMG_AR0[np.isnan(IMG_AR0)] = 0
+                
+                UpIAR = np.float(self.opt.saturation_upper_limit_target)
+                LoIAR = np.float(self.opt.saturation_lower_limit_target)
+                
+                ref_array = (np.clip(IMG_AR0, LoIAR, UpIAR)-(UpIAR+ LoIAR)/2)/((UpIAR - LoIAR)/2)
+                
+                if self.opt.target_ch != 1 :
+                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array[:]
+                    IMG_A1[self.opt.reference_frame:self.opt.reference_frame + self.opt.target_ch,:,:] = ref_array[:]
+
+                else:
+                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array[:]
+                    IMG_A1[self.opt.reference_frame,:,:] = ref_array[:]
+                
+                label_array = IMG_A1[:]
             
             label_tensor = torch.tensor(label_array, dtype=torch.float32)
             
