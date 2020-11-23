@@ -89,10 +89,14 @@ Getting Started
    You can train the model with additional options as below:
 
       python3 Pix2PixHD_Train.py \
-      --dataset_name 'EUV2Mag' --data_size 1024 \
-      --input_ch 3 --logscale_input 3 \
-      --saturation_lower_limit_input 0 --saturation_upper_limit_input 200 \
-      --saturation_lower_limit_target -3000 --saturation_upper_limit_target 3000 \
+      --dataset_name 'EUV2Mag' \
+      --data_size 1024 \
+      --input_ch 3 \
+      --logscale_input 3 \
+      --saturation_lower_limit_input 0 \
+      --saturation_upper_limit_input 200 \
+      --saturation_lower_limit_target -3000 \
+      --saturation_upper_limit_target 3000 \
       --n_downsample 4 \
       --input_dir_train '../Datasets/Train_data/Train_input' \
       --target_dir_train '../Datasets/Train_data/Train_output' \
@@ -116,10 +120,14 @@ Getting Started
    You can generate data or test the model with additional options as below:
 
          python3 Pix2PixHD_Test.py \
-         --dataset_name 'EUV2Mag' --data_size 1024 \
-         --input_ch 3 --logscale_input 3 \
-         --saturation_lower_limit_input 0 --saturation_upper_limit_input 200 \
-         --saturation_lower_limit_target -3000 --saturation_upper_limit_target 3000 \
+         --dataset_name 'EUV2Mag' \
+         --data_size 1024 \
+         --input_ch 3 \
+         --logscale_input 3 \
+         --saturation_lower_limit_input 0 \
+         --saturation_upper_limit_input 200 \
+         --saturation_lower_limit_target -3000 \
+         --saturation_upper_limit_target 3000 \
          --n_downsample 4 \
          --input_dir_test '../Datasets/Test_data/Test_input' \
          --iteration 100000
