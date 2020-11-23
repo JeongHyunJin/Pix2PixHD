@@ -86,7 +86,7 @@ Getting Started
 
 <br/>
 
-   You can train the model with additional options as below:
+   You can train the model with manually modified options as below:
 
       python3 Pix2PixHD_Train.py \
       --dataset_name 'EUV2Mag' \
@@ -117,7 +117,7 @@ Getting Started
 
 <br/>
 
-   You can generate data or test the model with additional options as below:
+   You can generate data or test the model with manually modified options as below:
 
          python3 Pix2PixHD_Test.py \
          --dataset_name 'EUV2Mag' \
