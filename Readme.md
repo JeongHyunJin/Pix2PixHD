@@ -76,7 +76,7 @@ Getting Started
 <br/>
 
 **Training**    
-   You can train the model:
+   You can train the model with default options:
 
     python3 Pix2PixHD_Train.py
 
@@ -84,17 +84,45 @@ Getting Started
 * You can set the saving frequency in *Pix2PixHD_Options.py*. If you define "save_freq" of 10000, for example, a file which have an extension .pt will be saved every 10000 iterations.
 * It will save a pair of images for the Real data and Generated one by the model every specified interation at "./checkpoints/*dataset_name*/Image/Train"
 
+<br/>
+
+   You can train the model with additional options as below:
+
+      python3 Pix2PixHD_Train.py \
+      --dataset_name 'EUV2Mag' --data_size 1024 \
+      --input_ch 3 --logscale_input 3 \
+      --saturation_lower_limit_input 0 --saturation_upper_limit_input 200 \
+      --saturation_lower_limit_target -3000 --saturation_upper_limit_target 3000 \
+      --n_downsample 4 \
+      --input_dir_train '../Datasets/Train_data/Train_input' \
+      --target_dir_train '../Datasets/Train_data/Train_output' \
+      --n_epochs 100
 
 
 <br/>
  
 **Test**     
-   You can generate data from the inputs by the model or test the model:
+   You can generate data from the inputs by the model or test the model with default options:
  
     python3 Pix2PixHD_Test.py
 
 * It will save the AI-generated data every step (a step: saving frequency) at "./checkpoints/*dataset_name*/Image/Test"
 * When you set an iteration in TestOption class of *Pix2PixHD_Options.py*, it saves the generated data by a model which saved before.
+* BaseOptions in *Pix2PixHD_Options.py* when you train the model and when you test the model should be same.
+
+
+<br/>
+
+   You can generate data or test the model with additional options as below:
+
+         python3 Pix2PixHD_Test.py \
+         --dataset_name 'EUV2Mag' --data_size 1024 \
+         --input_ch 3 --logscale_input 3 \
+         --saturation_lower_limit_input 0 --saturation_upper_limit_input 200 \
+         --saturation_lower_limit_target -3000 --saturation_upper_limit_target 3000 \
+         --n_downsample 4 \
+         --input_dir_test '../Datasets/Test_data/Test_input' \
+         --iteration 100000
 
 <br/>
 
