@@ -26,21 +26,21 @@ Prerequisites
 * Flags: see *Pix2PixHD_Options.py* for all the training and test flags.     
 >    Before running the model, you have to check or adjust the options for the input and target datasets.
      
-      # data option in BaseOption class
-      --dataset_name: 'Pix2PixHD' (default)
-      
-      --input_ch: 1 (default)
-      --target_ch: 1 (default)
-      
-      --data_size: 1024 (default)
-      
-      --logscale_input: False (default)
-      --logscale_target: False (default)
-      
-      --saturation_lower_limit_input: 1 (default)
-      --saturation_upper_limit_input: 100 (default)
-      --saturation_lower_limit_target: 1 (default)
-      --saturation_upper_limit_target: 100 (default)
+     # data option in BaseOption class
+     --dataset_name: 'Pix2PixHD' (default)
+
+     --input_ch: 1 (default)
+     --target_ch: 1 (default)
+
+     --data_size: 1024 (default)
+
+     --logscale_input: False (default)
+     --logscale_target: False (default)
+
+     --saturation_lower_limit_input: 1 (default)
+     --saturation_upper_limit_input: 100 (default)
+     --saturation_lower_limit_target: 1 (default)
+     --saturation_upper_limit_target: 100 (default)
       
 >    And you have to set the pathes of input and target directories.
 
@@ -88,19 +88,19 @@ Getting Started
 
    You can train the model with manually modified options as below:
 
-      python3 Pix2PixHD_Train.py \
-      --dataset_name 'EUV2Mag' \
-      --data_size 1024 \
-      --input_ch 3 \
-      --logscale_input 3 \
-      --saturation_lower_limit_input 0 \
-      --saturation_upper_limit_input 200 \
-      --saturation_lower_limit_target -3000 \
-      --saturation_upper_limit_target 3000 \
-      --n_downsample 4 \
-      --input_dir_train '../Datasets/Train_data/Train_input' \
-      --target_dir_train '../Datasets/Train_data/Train_output' \
-      --n_epochs 100
+    python3 Pix2PixHD_Train.py \
+    --dataset_name 'EUV2Mag' \
+    --data_size 1024 \
+    --input_ch 3 \
+    --logscale_input 3 \
+    --saturation_lower_limit_input 0 \
+    --saturation_upper_limit_input 200 \
+    --saturation_lower_limit_target -3000 \
+    --saturation_upper_limit_target 3000 \
+    --n_downsample 4 \
+    --input_dir_train '../Datasets/Train_data/Train_input' \
+    --target_dir_train '../Datasets/Train_data/Train_output' \
+    --n_epochs 100
 
 
 <br/>
@@ -119,18 +119,18 @@ Getting Started
 
    You can generate data or test the model with manually modified options as below:
 
-         python3 Pix2PixHD_Test.py \
-         --dataset_name 'EUV2Mag' \
-         --data_size 1024 \
-         --input_ch 3 \
-         --logscale_input 3 \
-         --saturation_lower_limit_input 0 \
-         --saturation_upper_limit_input 200 \
-         --saturation_lower_limit_target -3000 \
-         --saturation_upper_limit_target 3000 \
-         --n_downsample 4 \
-         --input_dir_test '../Datasets/Test_data/Test_input' \
-         --iteration 100000
+    python3 Pix2PixHD_Test.py \
+    --dataset_name 'EUV2Mag' \
+    --data_size 1024 \
+    --input_ch 3 \
+    --logscale_input 3 \
+    --saturation_lower_limit_input 0 \
+    --saturation_upper_limit_input 200 \
+    --saturation_lower_limit_target -3000 \
+    --saturation_upper_limit_target 3000 \
+    --n_downsample 4 \
+    --input_dir_test '../Datasets/Test_data/Test_input' \
+    --iteration 100000
 
 <br/>
 
