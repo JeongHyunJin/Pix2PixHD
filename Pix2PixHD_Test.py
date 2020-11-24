@@ -47,7 +47,7 @@ if __name__ == '__main__':
     Max_iter = 400000 ######### You can change the Maximum iteration value.
 ###############################################################################
 
-    if iters == False :
+    if (iters == False) or (iters == -1) :
         for i in range(step,Max_iter+step,step):
             
             ITERATION = int(i)
