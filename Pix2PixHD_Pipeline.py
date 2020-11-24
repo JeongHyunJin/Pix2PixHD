@@ -112,21 +112,21 @@ class CustomDataset(Dataset):
                 ref_array = (np.clip(IMG_AR0, LoIAR, UpIAR)-(UpIAR+ LoIAR)/2)/((UpIAR - LoIAR)/2)
                 
                 if self.opt.target_ch != 1 :
-                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array[:]
-                    IMG_A1[self.opt.reference_frame:self.opt.reference_frame + self.opt.target_ch,:,:] = ref_array[:]
+                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array
+                    IMG_A1[self.opt.reference_frame:self.opt.reference_frame + self.opt.target_ch,:,:] = ref_array
 
                 else:
-                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array[:]
-                    IMG_A1[self.opt.reference_frame,:,:] = ref_array[:]
+                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array
+                    IMG_A1[self.opt.reference_frame,:,:] = ref_array
                 
-                label_array = IMG_A1[:]
+                label_array = np.array(IMG_A1, dtype=np.float32 )
                 
             #--------------------------------------
             label_array = self.__rotate(label_array)
             label_array = self.__pad(label_array, self.opt.padding_size)
             label_array = self.__random_crop(label_array)
             
-            label_tensor = torch.tensor(label_array)
+            label_tensor = torch.tensor(label_array, dtype=torch.float32)
             
             #--------------------------------------
             if len(label_tensor.shape) == 2:
@@ -227,14 +227,14 @@ class CustomDataset(Dataset):
                 ref_array = (np.clip(IMG_AR0, LoIAR, UpIAR)-(UpIAR+ LoIAR)/2)/((UpIAR - LoIAR)/2)
                 
                 if self.opt.target_ch != 1 :
-                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array[:]
-                    IMG_A1[self.opt.reference_frame:self.opt.reference_frame + self.opt.target_ch,:,:] = ref_array[:]
+                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array
+                    IMG_A1[self.opt.reference_frame:self.opt.reference_frame + self.opt.target_ch,:,:] = ref_array
 
                 else:
-                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array[:]
-                    IMG_A1[self.opt.reference_frame,:,:] = ref_array[:]
+                    IMG_A1[0:self.opt.reference_frame-1,:,:] = label_array
+                    IMG_A1[self.opt.reference_frame,:,:] = ref_array
                 
-                label_array = IMG_A1[:]
+                label_array = np.array(IMG_A1, dtype = np.float32)
             
             label_tensor = torch.tensor(label_array, dtype=torch.float32)
             
