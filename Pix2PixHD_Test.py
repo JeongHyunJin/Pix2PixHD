@@ -81,7 +81,7 @@ if __name__ == '__main__':
                         np_fake = 10**(np_fake)
                     
                     #--------------------------------------
-                    if opt.input_format in ["tif", "tiff"]:
+                    if opt.data_format_input in ["tif", "tiff"]:
                         pil_image = Image.fromarray(np_fake)
                         pil_image.save(os.path.join(dir_image_save, name[0] + '_AI.fits'))
                     elif opt.data_format_input in ["npy"]:
@@ -124,7 +124,7 @@ if __name__ == '__main__':
                     np_fake = 10**(np_fake)
                 
                 #--------------------------------------
-                if opt.input_format in ["tif", "tiff"]:
+                if opt.data_format_input in ["tif", "tiff"]:
                     pil_image = Image.fromarray(np_fake)
                     pil_image.save(os.path.join(dir_image_save, name[0] + '_AI.fits'))
                 elif opt.data_format_input in ["npy"]:
