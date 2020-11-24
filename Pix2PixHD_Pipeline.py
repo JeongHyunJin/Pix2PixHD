@@ -178,11 +178,11 @@ class CustomDataset(Dataset):
         else:
 # [ Test Input ] ==============================================================
             if self.input_format in ["tif"]:
-                IMG_A0 = np.array(Image.open(self.label_path_list[index])).transpose(2, 0 ,1)            
+                IMG_A0 = np.array(Image.open(self.label_path_list[index]))       
             elif self.input_format in ["npy"]:
-                IMG_A0 = np.load(self.label_path_list[index], allow_pickle=True).transpose(2, 0 ,1)
+                IMG_A0 = np.load(self.label_path_list[index], allow_pickle=True)
             elif self.input_format in ["fits", "fts"]:                    
-                IMG_A0 = np.array(fits.open(self.label_path_list[index])[0].data).transpose(2, 0 ,1)
+                IMG_A0 = np.array(fits.open(self.label_path_list[index])[0].data)
             else:
                 NotImplementedError("Please check data_format_input option. It has to be tif or npy or fits.")
             
