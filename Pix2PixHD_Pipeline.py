@@ -87,7 +87,7 @@ class CustomDataset(Dataset):
             #--------------------------------------
             if self.opt.logscale_input == True:
                 IMG_A0[np.isnan(IMG_A0)] = 0.1
-                IMG_A0[IMG_A0 < 1] = 0.1
+                IMG_A0[IMG_A0 == 0] = 0.1
                 IMG_A0 = np.log10(IMG_A0)
             else:
                 IMG_A0[np.isnan(IMG_A0)] = 0
@@ -101,7 +101,7 @@ class CustomDataset(Dataset):
             if self.opt.reference_frame != -1 :
                 if self.opt.logscale_target == True:
                     IMG_AR0[np.isnan(IMG_AR0)] = 0.1
-                    IMG_AR0[IMG_AR0 < 1] = 0.1
+                    IMG_AR0[IMG_AR0 == 0] = 0.1
                     IMG_AR0 = np.log10(IMG_AR0)
                 else:
                     IMG_AR0[np.isnan(IMG_AR0)] = 0
@@ -150,7 +150,7 @@ class CustomDataset(Dataset):
             #--------------------------------------
             if self.opt.logscale_target == True:
                 IMG_B0[np.isnan(IMG_B0)] = 0.1
-                IMG_B0[IMG_B0 < 1] = 0.1
+                IMG_B0[IMG_B0 == 0] = 0.1
                 IMG_B0 = np.log10(IMG_B0)
             else:
                 IMG_B0[np.isnan(IMG_B0)] = 0
@@ -202,7 +202,7 @@ class CustomDataset(Dataset):
             #--------------------------------------
             if self.opt.logscale_input == True:
                 IMG_A0[np.isnan(IMG_A0)] = 0.1
-                IMG_A0[IMG_A0 < 1] = 0.1
+                IMG_A0[IMG_A0 == 0] = 0.1
                 IMG_A0 = np.log10(IMG_A0)
             else:
                 IMG_A0[np.isnan(IMG_A0)] = 0
@@ -216,7 +216,7 @@ class CustomDataset(Dataset):
             if self.opt.reference_frame != -1 :
                 if self.opt.logscale_target == True:
                     IMG_AR0[np.isnan(IMG_AR0)] = 0.1
-                    IMG_AR0[IMG_AR0 < 1] = 0.1
+                    IMG_AR0[IMG_AR0 == 0] = 0.1
                     IMG_AR0 = np.log10(IMG_AR0)
                 else:
                     IMG_AR0[np.isnan(IMG_AR0)] = 0
