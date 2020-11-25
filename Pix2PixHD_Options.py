@@ -53,7 +53,7 @@ class BaseOption(object):
         self.parser.add_argument('--batch_size', type=int, default=1, help='the number of batch_size')
         self.parser.add_argument('--data_type', type=int, default=32, help='float dtype')
         self.parser.add_argument('--image_mode', type=str, default='png', help='extension for saving image')
-        self.parser.add_argument('--n_downsample', type=int, default=2, help='how many times you want to downsample input data in G')
+        self.parser.add_argument('--n_downsample', type=int, default=4, help='how many times you want to downsample input data in G')
         self.parser.add_argument('--n_residual', type=int, default=9, help='the number of residual blocks in G')
         self.parser.add_argument('--n_D', type=int, default=2, help='how many discriminators in differet scales you want to use')
         
