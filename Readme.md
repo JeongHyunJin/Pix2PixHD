@@ -80,7 +80,7 @@ Getting Started
 
     python3 Pix2PixHD_Train.py
 
-* When the model is training, it saves the model every step (a step: saving frequency) as a file with extension .pt or .pth at "./checkpoints/*dataset_name*/Model"
+* When the model is training, it saves the model every step (a step: saving frequency) as a file with an extension .pt or .pth at "./checkpoints/*dataset_name*/Model"
 * You can set the saving frequency in *Pix2PixHD_Options.py*. If you define "save_freq" of 10000, for example, a file which have an extension .pt will be saved every 10000 iterations.
 * It will save a pair of images for the Real data and Generated one by the model every specified interation at "./checkpoints/*dataset_name*/Image/Train"
 
