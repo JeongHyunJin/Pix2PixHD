@@ -135,11 +135,11 @@ Getting Started
 **Outputs**   
    It will make directories and save outputs as below:
     
-     * Pix2PixHD_Train.py:
-        ./chechpoints/{dataset_name}/Image/Train/{iteration_real.png}
-        ./chechpoints/{dataset_name}/Image/Train/{iteration_fake.png}
-        ./chechpoints/{dataset_name}/Model/{iteration_G.pt}
-        ./chechpoints/{dataset_name}/Model/{iteration_D.pt}
-     
-     * Pix2PixHD_Test.py:
-        ./chechpoints/{dataset_name}/Image/Test/{iteration}/{filename_AI.extension}
+    # Pix2PixHD_Train.py:
+       ./chechpoints/{dataset_name}/Image/Train/{iteration_real.png}
+       ./chechpoints/{dataset_name}/Image/Train/{iteration_fake.png}
+       ./chechpoints/{dataset_name}/Model/{iteration_G.pt}
+       ./chechpoints/{dataset_name}/Model/{iteration_D.pt}
+
+    # Pix2PixHD_Test.py:
+       ./chechpoints/{dataset_name}/Image/Test/{iteration}/{filename_AI.extension}
