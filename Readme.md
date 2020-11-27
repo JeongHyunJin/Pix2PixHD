@@ -97,7 +97,6 @@ Getting Started
     --saturation_upper_limit_input 200 \
     --saturation_lower_limit_target -3000 \
     --saturation_upper_limit_target 3000 \
-    --n_downsample 4 \
     --input_dir_train '../Datasets/Train_data/Train_input' \
     --target_dir_train '../Datasets/Train_data/Train_output' \
     --n_epochs 100
@@ -128,7 +127,6 @@ Getting Started
     --saturation_upper_limit_input 200 \
     --saturation_lower_limit_target -3000 \
     --saturation_upper_limit_target 3000 \
-    --n_downsample 4 \
     --input_dir_test '../Datasets/Test_data/Test_input' \
     --iteration 100000
 
