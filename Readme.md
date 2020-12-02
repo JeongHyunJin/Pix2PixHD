@@ -92,7 +92,7 @@ Getting Started
     --dataset_name 'EUV2Mag' \
     --data_size 1024 \
     --input_ch 3 \
-    --logscale_input 3 \
+    --logscale_input True \
     --saturation_lower_limit_input 0 \
     --saturation_upper_limit_input 200 \
     --saturation_lower_limit_target -3000 \
@@ -122,7 +122,7 @@ Getting Started
     --dataset_name 'EUV2Mag' \
     --data_size 1024 \
     --input_ch 3 \
-    --logscale_input 3 \
+    --logscale_input True \
     --saturation_lower_limit_input 0 \
     --saturation_upper_limit_input 200 \
     --saturation_lower_limit_target -3000 \
