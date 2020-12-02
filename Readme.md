@@ -89,6 +89,7 @@ Getting Started
    You can train the model with manually modified options as below:
    
    Ex 1)
+   
     python3 Pix2PixHD_Train.py \
     --dataset_name 'EUV2Mag' \
     --data_size 1024 \
@@ -105,6 +106,7 @@ Getting Started
 <br/>
    
    Ex 2)
+   
     python3 Pix2PixHD_Train.py \
     --dataset_name 'Map2Sim' \
     --data_size 256 \
@@ -131,6 +133,7 @@ Getting Started
    You can generate data or test the model with manually modified options as below:
    
    Ex 1)
+   
     python3 Pix2PixHD_Test.py \
     --dataset_name 'EUV2Mag' \
     --data_size 1024 \
@@ -146,6 +149,7 @@ Getting Started
 <br/>
 
    Ex 2)
+   
     python3 Pix2PixHD_Test.py \
     --dataset_name 'Map2Sim' \
     --data_size 256 \
