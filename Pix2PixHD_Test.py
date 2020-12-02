@@ -112,7 +112,7 @@ if __name__ == '__main__':
                 
                 UpIB = opt.saturation_upper_limit_target
                 LoIB = opt.saturation_lower_limit_target
-                    
+                
                 np_fake = fake.cpu().numpy().squeeze() *((UpIB - LoIB)/2) +(UpIB+ LoIB)/2
                 
                 #--------------------------------------
