@@ -87,7 +87,8 @@ Getting Started
 <br/>
 
    You can train the model with manually modified options as below:
-
+   
+   Ex 1)
     python3 Pix2PixHD_Train.py \
     --dataset_name 'EUV2Mag' \
     --data_size 1024 \
@@ -100,8 +101,19 @@ Getting Started
     --input_dir_train '../Datasets/Train_data/Train_input' \
     --target_dir_train '../Datasets/Train_data/Train_output' \
     --n_epochs 100
-
-
+    
+<br/>
+   
+   Ex 2)
+    python3 Pix2PixHD_Train.py \
+    --dataset_name 'Map2Sim' \
+    --data_size 256 \
+    --input_dir_train 'D:/Train_input' \
+    --target_dir_train 'D:/Train_output' \
+    --batch_size 64 \
+    --save_freq 100 \
+    --n_epochs 100
+    
 <br/>
  
 **Test**     
@@ -117,7 +129,8 @@ Getting Started
 <br/>
 
    You can generate data or test the model with manually modified options as below:
-
+   
+   Ex 1)
     python3 Pix2PixHD_Test.py \
     --dataset_name 'EUV2Mag' \
     --data_size 1024 \
@@ -129,7 +142,18 @@ Getting Started
     --saturation_upper_limit_target 3000 \
     --input_dir_test '../Datasets/Test_data/Test_input' \
     --iteration 100000
+    
+<br/>
 
+   Ex 2)
+    python3 Pix2PixHD_Test.py \
+    --dataset_name 'Map2Sim' \
+    --data_size 256 \
+    --input_dir_train 'D:/Train_input' \
+    --target_dir_train 'D:/Train_output' \
+    --batch_size 64 \
+    --save_freq 100 \
+    --n_epochs 100
 <br/>
 
 **Outputs**   
