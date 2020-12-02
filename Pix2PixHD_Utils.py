@@ -92,7 +92,7 @@ class Manager(object):
         return data
 
     def tensor2image(self, image_tensor):
-        np_image = image_tensor.squeeze().cpu().float().numpy()
+        np_image = image_tensor[0].squeeze().cpu().float().numpy()
         if len(np_image.shape) == 3:
             np_image = np.transpose(np_image, (1, 2, 0))  # HWC
         else:
