@@ -75,7 +75,7 @@ class BaseOption(object):
         opt.flip = False
         
         opt.n_df = 64
-        opt.n_gf = 32
+        opt.n_gf = 64
                     
         #--------------------------------
         if opt.data_type == 16:
