@@ -137,14 +137,9 @@ if __name__ == '__main__':
                     input, target = input.to(device=device, dtype=dtype), target.to(device, dtype=dtype)
                     fake = G(input)
                     
-                    if test_opt.batch_size > 1:
-                        np_fake = fake.cpu().numpy().squeeze()[0]
-                        np_real = target.cpu().numpy().squeeze()[0]
-                    else:
-                        np_fake = fake.cpu().numpy().squeeze()
-                        np_real = target.cpu().numpy().squeeze()
-
-                        
+                    np_fake = fake.cpu().numpy().squeeze()
+                    np_real = target.cpu().numpy().squeeze()
+ 
                     manager.save_image(np_fake, path=os.path.join(test_image_dir, 'Check_{:d}_'.format(current_step)+ name[0] + '_fake.png'))
                     manager.save_image(np_real, path=os.path.join(test_image_dir, 'Check_{:d}_'.format(current_step)+ name[0] + '_real.png'))
                     
