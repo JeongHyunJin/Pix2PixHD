@@ -37,10 +37,10 @@ Prerequisites
      --logscale_input: False (default)
      --logscale_target: False (default)
 
-     --saturation_lower_limit_input: 1 (default)
-     --saturation_upper_limit_input: 100 (default)
-     --saturation_lower_limit_target: 1 (default)
-     --saturation_upper_limit_target: 100 (default)
+     --saturation_lower_limit_input: -1 (default)
+     --saturation_upper_limit_input: 1 (default)
+     --saturation_lower_limit_target: -1 (default)
+     --saturation_upper_limit_target: 1 (default)
       
 >    And you have to set the pathes of input and target directories.
 
