@@ -123,6 +123,9 @@ if __name__ == '__main__':
                 if opt.logscale_target == True:
                     np_fake = 10**(np_fake)
                 
+                if opt.save_scale != 1:
+                    np_fake = np_fake*np.float(opt.save_scale)
+                
                 #--------------------------------------
                 if opt.data_format_input in ["tif", "tiff"]:
                     pil_image = Image.fromarray(np_fake)
