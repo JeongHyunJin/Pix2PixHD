@@ -24,6 +24,7 @@ if __name__ == '__main__':
     from Pix2PixHD_Pipeline import CustomDataset
     from Pix2PixHD_Utils import Manager, update_lr, weights_init
     from tqdm import tqdm
+    import numpy as np
     import datetime        
 
     start_time = datetime.datetime.now()
@@ -139,7 +140,11 @@ if __name__ == '__main__':
                     
                     np_fake = fake.cpu().numpy().squeeze()
                     np_real = target.cpu().numpy().squeeze()
- 
+                    
+                    if opt.display_scale != 1:
+                        np_fake = np.clip(np_fake*np.float(opt.display_scale), -1, 1)
+                        np_real = np.clip(np_real*np.float(opt.display_scale), -1, 1)
+                        
                     manager.save_image(np_fake, path=os.path.join(test_image_dir, 'Check_{:d}_'.format(current_step)+ name[0] + '_fake.png'))
                     manager.save_image(np_real, path=os.path.join(test_image_dir, 'Check_{:d}_'.format(current_step)+ name[0] + '_real.png'))
                     
