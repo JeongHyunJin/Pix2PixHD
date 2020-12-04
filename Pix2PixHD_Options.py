@@ -69,6 +69,8 @@ class BaseOption(object):
         self.parser.add_argument('--report_freq', type=int, default=100)
         self.parser.add_argument('--save_freq', type=int, default=10000)
         self.parser.add_argument('--display_freq', type=int, default=100)
+        self.parser.add_argument('--save_scale', type=float, default=1)
+        self.parser.add_argument('--display_scale', type=float, default=1)
 
         
     def parse(self):
