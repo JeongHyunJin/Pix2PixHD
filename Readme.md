@@ -189,3 +189,14 @@ Getting Started
 
     # Pix2PixHD_Test.py:
        ./chechpoints/{dataset_name}/Image/Test/{iteration}/{filename_AI.extension}
+
+<br/>
+
+Network architectures and Hyperparameters
+------------
+  The generative network consists of several convolutional layers, residual blocks and transposed convolutional layers.
+  A convolutional layer contains a set of filters that extract features automatically from the input data, like a human visual system, and whose parameters are learned or updated during the model training process.
+  A transposed convolutional layer is an inverse process of convolution and tries to reconstruct output from the extracted features.
+
+<br/>
+ To be written...
