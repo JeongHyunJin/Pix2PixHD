@@ -194,9 +194,45 @@ Getting Started
 
 Network architectures and Hyperparameters
 ------------
-  The generative network consists of several convolutional layers, residual blocks and transposed convolutional layers.
-  A convolutional layer contains a set of filters that extract features automatically from the input data, like a human visual system, and whose parameters are learned or updated during the model training process.
-  A transposed convolutional layer is an inverse process of convolution and tries to reconstruct output from the extracted features.
+
+**Generator** 
+
+ To be written...
+ 
+      # data augmentation in BaseOption class
+     --n_downsample: 4 (default)
+     --n_residual: 9 (default)
+
+**Discriminator** 
+
+ To be written...
+
+     # data augmentation in BaseOption class
+     --n_D: 2 (default)
+
+**Hyperparameters** 
+
+__The Loss configuration of the Objective functions__    
+* Total loss = ( cGAN loss ) + $\lambda_{FM} * ( Feature Matching loss )   
+
+      # hyperparameters in TrainOption class
+      --lambda_FM: 10 (default)
+      --GAN_type: 'LSGAN' (default)
+
+
+__Optimizer__    
+* Optimizer : Adam solver
+* Learning rate : lr
+* momentum beta 1 parameter : beta1
+* momentum beta 2 parameter : beta2  
+
+      # hyperparameters in TrainOption class
+      --beta1: 0.5 (default)
+      --beta2: 0.999 (default)
+      --lr: 0.0002 (default)
+
+
+__Initializer__  
+* Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
 
 <br/>
- To be written...
