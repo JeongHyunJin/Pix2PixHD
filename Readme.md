@@ -7,6 +7,14 @@ Here, we have modifed the code of the Pix2PixHD to use scientific datasets which
     Baseline of the Pix2PixHD model: [Wang et al. 2018](https://arxiv.org/abs/1711.11585) ([GitHub](https://github.com/NVIDIA/pix2pixHD)) <br/>
     Application of the Pix2PixHD to Science: [Jeong et al. 2020](https://iopscience.iop.org/article/10.3847/2041-8213/abc255) ([GitHub](https://github.com/JeongHyunJin/Jeong2020_SolarFarsideMagnetograms)), [Shin et al. 2020](https://iopscience.iop.org/article/10.3847/2041-8213/ab9085) ([GitHub](https://github.com/NoelShin/Ca2Mag))  <br/>
 
+
+* Structures <br/>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/68056295/101588905-bd115800-3a2a-11eb-87d6-ccfeac02ef28.png" width="150%" height="150%"></center>
+</p>
+
+
 <br/>
 
 Environments
