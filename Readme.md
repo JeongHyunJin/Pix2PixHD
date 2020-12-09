@@ -9,15 +9,15 @@ Here, we have modifed the code of the Pix2PixHD to use scientific datasets which
 
 
 * Structures <br/>
-    The Pix2PixHD consists of two major networks: one is a generative network (generator) and the other is a discriminative network (discriminator).
-    The generator tries to generate realistic output from input, and the discriminator tries to distinguish the more realistic pair between a real pair and a generated pair. 
-    The real pair consists of a real input and a real target.
-    The generated pair consists of a real input and an output from the generator.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/68056295/101589517-ed0d2b00-3a2b-11eb-85d3-c5f1b18eb2e0.png" width="90%" height="90%"></center>
 </p>
 
+    The Pix2PixHD consists of two major networks: one is a generative network (generator) and the other is a discriminative network (discriminator).
+    The generator tries to generate realistic output from input, and the discriminator tries to distinguish the more realistic pair between a real pair and a generated pair. 
+    The real pair consists of a real input and a real target.
+    The generated pair consists of a real input and an output from the generator.
 
 <br/>
 
