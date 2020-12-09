@@ -212,7 +212,7 @@ Network architectures and Hyperparameters
 
 **Hyperparameters** 
 
-*The Loss configuration of the Objective functions   
+* The Loss configuration of the Objective functions   
 
 Total loss = ( cGAN loss ) + $\lambda_{FM} * ( Feature Matching loss )   <br/>
 
