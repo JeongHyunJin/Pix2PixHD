@@ -11,7 +11,7 @@ Here, we have modifed the code of the Pix2PixHD to use scientific datasets which
 * Structures <br/>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/68056295/101589517-ed0d2b00-3a2b-11eb-85d3-c5f1b18eb2e0.png" width="80%" height="80%"></center>
+<img src="https://user-images.githubusercontent.com/68056295/101589517-ed0d2b00-3a2b-11eb-85d3-c5f1b18eb2e0.png" width="90%" height="90%"></center>
 </p>
 
 
