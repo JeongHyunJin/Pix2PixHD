@@ -119,7 +119,8 @@ class TrainOption(BaseOption):
         self.parser.add_argument('--is_train', type=bool, default=True, help='train flag')
         self.parser.add_argument('--n_epochs', type=int, default=150, help='how many epochs you want to train')
         self.parser.add_argument('--latest', type=int, default=0, help='Resume epoch')
-
+        
+        # hyperparameters
         self.parser.add_argument('--beta1', type=float, default=0.5)
         self.parser.add_argument('--beta2', type=float, default=0.999)
         self.parser.add_argument('--epoch_decay', type=int, default=100, help='when to start decay the lr')
