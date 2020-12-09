@@ -22,7 +22,9 @@ Here, we have modifed the code of the Pix2PixHD to use scientific datasets which
 <br/>
 
 While the model is training, both networks compete with each other and get an update at every step with loss functions.
-Loss functions are objectives that score the quality of results by the model, and the network automatically learns that they are appropriate for satisfying a goal, i.e., the generation of realistic data.
+Loss functions are objectives that score the quality of results by the model, and the networks automatically learn that they are appropriate for satisfying a goal, i.e., the generation of realistic data.
+They are iterated until the assigned iteration, which is a sufficient number assuring the convergence of the model.
+
 
 <br/>
 
