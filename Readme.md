@@ -8,7 +8,7 @@ Here, we have modifed the code of the Pix2PixHD to use scientific datasets which
     Application of the Pix2PixHD to Science: [Jeong et al. 2020](https://iopscience.iop.org/article/10.3847/2041-8213/abc255) ([GitHub](https://github.com/JeongHyunJin/Jeong2020_SolarFarsideMagnetograms)), [Shin et al. 2020](https://iopscience.iop.org/article/10.3847/2041-8213/ab9085) ([GitHub](https://github.com/NoelShin/Ca2Mag))  <br/>
 
 
-* Structures <br/>
+* Flowchart and structures of the Pix2PixHD <br/>
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/68056295/101602604-be9a4a80-3a41-11eb-91fa-15e095fe9892.png" width="90%" height="90%"></center>
