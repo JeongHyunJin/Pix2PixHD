@@ -15,9 +15,14 @@ Here, we have modifed the code of the Pix2PixHD to use scientific datasets which
 </p>
 
    The Pix2PixHD consists of two major networks: one is a generative network (generator) and the other is a discriminative network (discriminator).
-  The generator tries to generate realistic output from input, and the discriminator tries to distinguish the more realistic pair between a real pair and a generated pair. 
-  The real pair consists of a real input and a real target.
-  The generated pair consists of a real input and an output from the generator.
+   The generator tries to generate realistic output from input, and the discriminator tries to distinguish the more realistic pair between a real pair and a generated pair. 
+   The real pair consists of a real input and a real target.
+   The generated pair consists of a real input and an output from the generator.
+
+<br/>
+
+While the model is training, both networks compete with each other and get an update at every step with loss functions.
+Loss functions are objectives that score the quality of results by the model, and the network automatically learns that they are appropriate for satisfying a goal, i.e., the generation of realistic data.
 
 <br/>
 
