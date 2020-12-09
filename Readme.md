@@ -212,19 +212,21 @@ Network architectures and Hyperparameters
 
 **Hyperparameters** 
 
-__The Loss configuration of the Objective functions__    
-* Total loss = ( cGAN loss ) + $\lambda_{FM} * ( Feature Matching loss )   
+*The Loss configuration of the Objective functions   
+
+Total loss = ( cGAN loss ) + $\lambda_{FM} * ( Feature Matching loss )   <br/>
 
       # hyperparameters in TrainOption class
       --lambda_FM: 10 (default)
       --GAN_type: 'LSGAN' (default)
 
 
-__Optimizer__    
-* Optimizer : Adam solver
-* Learning rate : lr
-* momentum beta 1 parameter : beta1
-* momentum beta 2 parameter : beta2  
+* Optimizer    
+
+Optimizer : Adam solver <br/>
+Learning rate : lr <br/>
+momentum beta 1 parameter : beta1 <br/>
+momentum beta 2 parameter : beta2 <br/>
 
       # hyperparameters in TrainOption class
       --beta1: 0.5 (default)
@@ -232,7 +234,8 @@ __Optimizer__
       --lr: 0.0002 (default)
 
 
-__Initializer__  
-* Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
+* Initializer
+
+Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
 
 <br/>
