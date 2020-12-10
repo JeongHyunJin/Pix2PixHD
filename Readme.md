@@ -226,7 +226,7 @@ To ensure an enough number of learnable parameters, the residual blocks are plac
 
 <br/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of downsample in the encoder of the generator : n_downsample <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of downsampling in the encoder of the generator : n_downsample <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of residual blocks in the generator : n_residual <br/>
 
       # data augmentation in BaseOption class
