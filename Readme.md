@@ -214,7 +214,6 @@ Network architectures and Hyperparameters
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You can run this code by changing the hyperparameters of Pix2PixHD.
 
 <br/>
-<br/>
 
 **Generator** 
 
