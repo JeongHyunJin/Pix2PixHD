@@ -217,12 +217,12 @@ Network architectures and Hyperparameters
 
 **Generator** 
 
-The generator consists of an encoder, residual blocks, and a decoder. <br/>
-The encoder extract features automatically from the input data using several convolutional layers. <br/>
-It downsamples there input feature maps by half and increase the number of weights of the convolutional layers around twice. <br/>
-The decoder restores the reduced dimension to the size of the input data using several transposed convolutional layers. <br/>
-The transposed convolutional layer is an inverse process of convolution and tries to reconstruct output from the extracted features. <br/>
-To ensure an enough number of learnable parameters, the residual blocks are placed between the encoder and decoder. <br/>
+The generator consists of an encoder, residual blocks, and a decoder.
+The encoder extract features automatically from the input data using several convolutional layers.
+It downsamples there input feature maps by half and increase the number of weights of the convolutional layers around twice.
+The decoder restores the reduced dimension to the size of the input data using several transposed convolutional layers.
+The transposed convolutional layer is an inverse process of convolution and tries to reconstruct output from the extracted features.
+To ensure an enough number of learnable parameters, the residual blocks are placed between the encoder and decoder.
 
 <br/>
 
@@ -237,8 +237,8 @@ To ensure an enough number of learnable parameters, the residual blocks are plac
 
 **Discriminator** 
 
-The discriminative network is a classifier that consists of several convolution layers. <br/>
-Features that are passed through the convolution layers are fed into a single sigmoid output in order to produce a probability output in the range of 0 (fake) to 1 (real). <br/>
+The discriminator is a classifier that consists of several convolution layers and the pix2pixHD uses more than one discriminator.
+In a discriminator, features that are passed through the convolution layers are fed into a single sigmoid output in order to produce a probability output in the range of 0 (fake) to 1 (real).
 
 <br/>
 
