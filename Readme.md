@@ -214,6 +214,7 @@ Network architectures and Hyperparameters
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You can run this code by changing the hyperparameters of Pix2PixHD.
 
 <br/>
+<br/>
 
 **Generator** 
 
@@ -234,6 +235,7 @@ To ensure an enough number of learnable parameters, the residual blocks are plac
      --n_residual: 9 (default)
 
 <br/>
+<br/>
 
 **Discriminator** 
 
@@ -247,6 +249,7 @@ In a discriminator, features that are passed through the convolution layers are 
      # data augmentation in BaseOption class
      --n_D: 2 (default)
 
+<br/>
 <br/>
 
 **Hyperparameters** 
