@@ -197,6 +197,8 @@ Network architectures and Hyperparameters
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written...
 
+<br/>
+
 **Generator** 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written...
@@ -205,12 +207,16 @@ Network architectures and Hyperparameters
      --n_downsample: 4 (default)
      --n_residual: 9 (default)
 
+<br/>
+
 **Discriminator** 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To be written...
 
      # data augmentation in BaseOption class
      --n_D: 2 (default)
+
+<br/>
 
 **Hyperparameters** 
 
@@ -222,6 +228,7 @@ Network architectures and Hyperparameters
       --lambda_FM: 10 (default)
       --GAN_type: 'LSGAN' (default)
 
+<br/>
 
 * Optimizer    
 
@@ -236,6 +243,7 @@ Network architectures and Hyperparameters
       --beta2: 0.999 (default)
       --lr: 0.0002 (default)
 
+<br/>
 
 * Initializer
 
