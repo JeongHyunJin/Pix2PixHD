@@ -195,7 +195,7 @@ Getting Started
 Network architectures and Hyperparameters
 ------------
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You can run this code by changing the hyperparameters of the Pix2PixHD.
 
 <br/>
 
