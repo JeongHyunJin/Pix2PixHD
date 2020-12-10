@@ -195,11 +195,11 @@ Getting Started
 Network architectures and Hyperparameters
 ------------
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written...
 
 **Generator** 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written...
  
       # data augmentation in BaseOption class
      --n_downsample: 4 (default)
@@ -207,7 +207,7 @@ Network architectures and Hyperparameters
 
 **Discriminator** 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To be written...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To be written...
 
      # data augmentation in BaseOption class
      --n_D: 2 (default)
@@ -216,7 +216,7 @@ Network architectures and Hyperparameters
 
 * The Loss configuration of the Objective functions   
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total loss = ( cGAN loss ) + ( lambda_FM ) * ( Feature Matching loss )   <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total loss = ( cGAN loss ) + ( lambda_FM ) * ( Feature Matching loss )   <br/>
 
       # hyperparameters in TrainOption class
       --lambda_FM: 10 (default)
@@ -225,10 +225,10 @@ Network architectures and Hyperparameters
 
 * Optimizer    
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Optimizer : Adam solver <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Learning rate : lr <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; momentum beta 1 parameter : beta1 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; momentum beta 2 parameter : beta2 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Optimizer : Adam solver <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Learning rate : lr <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; momentum beta 1 parameter : beta1 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; momentum beta 2 parameter : beta2 <br/>
 
       # hyperparameters in TrainOption class
       --beta1: 0.5 (default)
@@ -238,6 +238,6 @@ Network architectures and Hyperparameters
 
 * Initializer
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
 
 <br/>
