@@ -201,7 +201,7 @@ Network architectures and Hyperparameters
 
 **Generator** 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written... <br/>
  
       # data augmentation in BaseOption class
      --n_downsample: 4 (default)
@@ -211,7 +211,8 @@ Network architectures and Hyperparameters
 
 **Discriminator** 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To be written...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To be written... <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of discriminator: n_D <br/>
 
      # data augmentation in BaseOption class
      --n_D: 2 (default)
