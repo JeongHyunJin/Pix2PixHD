@@ -238,7 +238,7 @@ Network architectures and Hyperparameters
 **Discriminator** 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The discriminative network is a classifier that consists of several convolution layers. <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Features are fed into a single sigmoid output in order to produce a probability output in the range of 0 (fake) to 1 (real). <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Features that are passed through the convolution layers are fed into a single sigmoid output in order to produce a probability output in the range of 0 (fake) to 1 (real). <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of discriminator: n_D <br/>
 
      # data augmentation in BaseOption class
