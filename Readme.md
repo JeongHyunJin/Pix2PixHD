@@ -118,8 +118,8 @@ Getting Started
    
     python3 Pix2PixHD_Train.py \
     --dataset_name 'EUV2Mag' \
-    --data_format_input: 'fits' \
-    --data_format_target: 'fits' \
+    --data_format_input 'fits' \
+    --data_format_target 'fits' \
     --data_size 1024 \
     --input_ch 3 \
     --logscale_input True \
@@ -164,8 +164,8 @@ Getting Started
    
     python3 Pix2PixHD_Test.py \
     --dataset_name 'EUV2Mag' \
-    --data_format_input: 'fits' \
-    --data_format_target: 'fits' \
+    --data_format_input 'fits' \
+    --data_format_target 'fits' \
     --data_size 1024 \
     --input_ch 3 \
     --logscale_input True \
