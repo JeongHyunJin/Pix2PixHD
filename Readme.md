@@ -28,6 +28,11 @@ Here, we have modifed the code of the Pix2PixHD to use scientific datasets which
 
 <br/>
 
+-------------------------
+
+<br/>
+
+
 Environments
 ------------
   This code has been tested on Ubuntu 18.04 with a Nvidia GeForce GTX Titan XP GPU, CUDA Version 11.0, Python 3.6.9, and PyTorch 1.3.1.
@@ -191,6 +196,11 @@ Getting Started
        ./chechpoints/{dataset_name}/Image/Test/{iteration}/{filename_AI.extension}
 
 <br/>
+
+-------------------------
+
+<br/>
+
 
 Network architectures and Hyperparameters
 ------------
