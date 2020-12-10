@@ -217,8 +217,18 @@ Network architectures and Hyperparameters
 
 **Generator** 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To be written... <br/>
- 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  The generator consists of an encoder, residual blocks, and a decoder. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  The encoder extract features automatically from the input data using several convolutional layers. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  It downsamples there input feature maps by half and increase the number of weights of the convolutional layers around twice. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  The decoder restores the reduced dimension to the size of the input data using several transposed convolutional layers. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  The transposed convolutional layer is an inverse process of convolution and tries to reconstruct output from the extracted features. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To ensure an enough number of learnable parameters, the residual blocks are placed between the encoder and decoder. <br/>
+
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of downsample in the encoder of the generator : n_downsample <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of residual blocks in the generator : n_downsample <br/>
+
       # data augmentation in BaseOption class
      --n_downsample: 4 (default)
      --n_residual: 9 (default)
@@ -227,7 +237,9 @@ Network architectures and Hyperparameters
 
 **Discriminator** 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To be written... <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The discriminative network is a classifier that consists of several convolution layers. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Features that are passed through the convolution layers are fed into a single sigmoid output in order to produce a probability output in the
+range of 0 (fake) to 1 (real) so that the discriminator acts like a classifier. <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of discriminator: n_D <br/>
 
      # data augmentation in BaseOption class
