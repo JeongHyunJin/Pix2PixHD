@@ -195,6 +195,8 @@ Getting Started
 Network architectures and Hyperparameters
 ------------
 
+ To be written...
+
 **Generator** 
 
  To be written...
@@ -214,7 +216,7 @@ Network architectures and Hyperparameters
 
 * The Loss configuration of the Objective functions   
 
-Total loss = ( cGAN loss ) + $\lambda_{FM}$ * ( Feature Matching loss )   <br/>
+Total loss = ( cGAN loss ) + ( lambda_FM ) * ( Feature Matching loss )   <br/>
 
       # hyperparameters in TrainOption class
       --lambda_FM: 10 (default)
