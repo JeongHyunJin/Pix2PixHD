@@ -207,7 +207,7 @@ Network architectures and Hyperparameters
 
 **Discriminator** 
 
- To be written...
+>    To be written...
 
      # data augmentation in BaseOption class
      --n_D: 2 (default)
@@ -216,7 +216,7 @@ Network architectures and Hyperparameters
 
 * The Loss configuration of the Objective functions   
 
-Total loss = ( cGAN loss ) + ( lambda_FM ) * ( Feature Matching loss )   <br/>
+>    Total loss = ( cGAN loss ) + ( lambda_FM ) * ( Feature Matching loss )   <br/>
 
       # hyperparameters in TrainOption class
       --lambda_FM: 10 (default)
@@ -225,10 +225,10 @@ Total loss = ( cGAN loss ) + ( lambda_FM ) * ( Feature Matching loss )   <br/>
 
 * Optimizer    
 
-Optimizer : Adam solver <br/>
-Learning rate : lr <br/>
-momentum beta 1 parameter : beta1 <br/>
-momentum beta 2 parameter : beta2 <br/>
+>    Optimizer : Adam solver <br/>
+>    Learning rate : lr <br/>
+>    momentum beta 1 parameter : beta1 <br/>
+>    momentum beta 2 parameter : beta2 <br/>
 
       # hyperparameters in TrainOption class
       --beta1: 0.5 (default)
@@ -238,6 +238,6 @@ momentum beta 2 parameter : beta2 <br/>
 
 * Initializer
 
-Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
+>    Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
 
 <br/>
