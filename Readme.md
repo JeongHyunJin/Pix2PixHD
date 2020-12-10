@@ -17,7 +17,7 @@ Here, we have modifed the code of the Pix2PixHD to use scientific datasets which
    The Pix2PixHD consists of two major networks: one is a generative network (generator) and the other is a discriminative network (discriminator).
    The generator tries to generate realistic output from input, and the discriminator tries to distinguish the more realistic pair between a real pair and a generated pair.
    The model use multi-scale discriminators that have an identical network structure but operate at different image scales.
-   It downsample the data of real and generated pair by a factor of 2^n to create a data pyramid of n scales. (n is the number of discriminator)
+   It downsample the data of real and generated pair by a factor of 2 to create a data pyramid of multi-scales.
    The real pair consists of a real input and a real target.
    The generated pair consists of a real input and an output from the generator.<br/>
 
