@@ -238,6 +238,6 @@ Network architectures and Hyperparameters
 
 * Initializer
 
->    Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
+&nbsp;&nbsp;&nbsp;&nbsp;Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
 
 <br/>
