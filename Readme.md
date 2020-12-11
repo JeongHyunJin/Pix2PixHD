@@ -199,7 +199,7 @@ Getting Started
        ./chechpoints/{dataset_name}/Model/{iteration_D.pt}
 
     # Pix2PixHD_Test.py:
-       ./chechpoints/{dataset_name}/Image/Test/{iteration}/{filename_AI.extension}
+       ./chechpoints/{dataset_name}/Image/Test/{iteration}/{input_filename_AI.extension}
 
 <br/>
 
