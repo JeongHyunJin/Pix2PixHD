@@ -253,7 +253,7 @@ In a discriminator, features that are passed through the convolution layers are 
 
 **Hyperparameters** 
 
-* The Loss configuration of the Objective functions   
+* The loss configuration of the objective functions   
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total loss = ( cGAN loss ) + ( lambda_FM ) * ( Feature Matching loss )   <br/>
 
