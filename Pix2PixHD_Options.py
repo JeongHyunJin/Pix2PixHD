@@ -124,7 +124,6 @@ class TrainOption(BaseOption):
         self.parser.add_argument('--beta1', type=float, default=0.5)
         self.parser.add_argument('--beta2', type=float, default=0.999)
         self.parser.add_argument('--epoch_decay', type=int, default=100, help='when to start decay the lr')
-        self.parser.add_argument('--GAN_type', type=str, default='LSGAN', help='[GAN, LSGAN, WGAN_GP]')
         self.parser.add_argument('--lambda_FM', type=int, default=10, help='weight for FM loss')
         self.parser.add_argument('--lr', type=float, default=0.0002)
 
