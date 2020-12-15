@@ -259,7 +259,6 @@ In a discriminator, features that are passed through the convolution layers are 
 
       # hyperparameters in TrainOption class
       --lambda_FM: 10 (default)
-      --GAN_type: 'LSGAN' (default)
 
 <br/>
 
