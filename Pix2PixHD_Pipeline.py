@@ -105,7 +105,7 @@ class CustomDataset(Dataset):
             
                 
 # [ Train Target ] ============================================================
-            if self.input_format in ["tif"]:
+            if self.input_format in ["tif", "tiff"]:
                 IMG_B0 = np.array(Image.open(self.target_path_list[index]))
             elif self.target_format in ["npy"]:
                 IMG_B0 = np.load(self.target_path_list[index], allow_pickle=True)
@@ -151,7 +151,7 @@ class CustomDataset(Dataset):
 # [ Test data ] ===============================================================
         else:
 # [ Test Input ] ==============================================================
-            if self.input_format in ["tif"]:
+            if self.input_format in ["tif", "tiff"]:
                 IMG_A0 = np.array(Image.open(self.label_path_list[index]))       
             elif self.input_format in ["npy"]:
                 IMG_A0 = np.load(self.label_path_list[index], allow_pickle=True)
