@@ -17,6 +17,7 @@ Reference:
 
 if __name__ == '__main__':
     import os
+    from glob import glob
     import torch
     import numpy as np
     from Pix2PixHD_Options import TestOption
@@ -43,14 +44,8 @@ if __name__ == '__main__':
 
 #------------------------------------------------------------------------------
     
-###############################################################################
-    Max_iter = 400000 ######### You can change the Maximum iteration value.
-###############################################################################
-
     if (iters == False) or (iters == -1) :
-        import os
-from glob import glob
-
+        
         dir_model = './checkpoints/{}/Model/*_G.pt'.format(str(STD)
         ITERATIONs = [os.path.basename(x).split('_')[0] for x in sorted(glob(dir_model))]
 
