@@ -48,9 +48,14 @@ if __name__ == '__main__':
 ###############################################################################
 
     if (iters == False) or (iters == -1) :
-        for i in range(step,Max_iter+step,step):
+        import os
+from glob import glob
+
+        dir_model = './checkpoints/{}/Model/*_G.pt'.format(str(STD)
+        ITERATIONs = [os.path.basename(x).split('_')[0] for x in sorted(glob(dir_model))]
+
+        for ITERATION in ITERATIONs:
             
-            ITERATION = int(i)
             path_model = './checkpoints/{}/Model/{}_G.pt'.format(str(STD), str(ITERATION))
             dir_image_save = './checkpoints/{}/Image/Test/{}'.format(str(STD), str(ITERATION))
             os.makedirs(dir_image_save, exist_ok=True)
