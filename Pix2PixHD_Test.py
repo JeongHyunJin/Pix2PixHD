@@ -53,43 +53,47 @@ if __name__ == '__main__':
             
             path_model = './checkpoints/{}/Model/{}_G.pt'.format(str(STD), str(ITERATION))
             dir_image_save = './checkpoints/{}/Image/Test/{}'.format(str(STD), str(ITERATION))
-            os.makedirs(dir_image_save, exist_ok=True)
-        
-            G = Generator(opt).to(device)
-            G.load_state_dict(torch.load(path_model))
-            
-            manager = Manager(opt)
-            
-            with torch.no_grad():
-                G.eval()
-                for input,  name in tqdm(test_data_loader):
-                    input = input.to(device)
-                    
-                    fake = G(input)
-                    
-                    UpIB = opt.saturation_upper_limit_target
-                    LoIB = opt.saturation_lower_limit_target
-                        
-                    np_fake = fake.cpu().numpy().squeeze() *((UpIB - LoIB)/2) +(UpIB+ LoIB)/2
-                    
-                     #--------------------------------------
-                    if len(np_fake.shape) == 3:
-                        np_fake = np_fake.transpose(1, 2 ,0)
-                    
-                    #--------------------------------------
-                    if opt.logscale_target == True:
-                        np_fake = 10**(np_fake)
-                    
-                    #--------------------------------------
-                    if opt.data_format_input in ["tif", "tiff"]:
-                        pil_image = Image.fromarray(np_fake)
-                        pil_image.save(os.path.join(dir_image_save, name[0] + '_AI.fits'))
-                    elif opt.data_format_input in ["npy"]:
-                        np.save(os.path.join(dir_image_save, name[0] + '_AI.fits'), np_fake, allow_pickle=True)
-                    elif opt.data_format_input in ["fits", "fts"]:       
-                        fits.writeto(os.path.join(dir_image_save, name[0] + '_AI.fits'), np_fake)
-                    else:
-                        NotImplementedError("Please check data_format_target option. It has to be fit or npy or fits.")
+                                                           
+            if os.path.isdir(dir_image_save) == True:
+                pass
+            else:                                             
+                os.makedirs(dir_image_save, exist_ok=True)
+
+                G = Generator(opt).to(device)
+                G.load_state_dict(torch.load(path_model))
+
+                manager = Manager(opt)
+
+                with torch.no_grad():
+                    G.eval()
+                    for input,  name in tqdm(test_data_loader):
+                        input = input.to(device)
+
+                        fake = G(input)
+
+                        UpIB = opt.saturation_upper_limit_target
+                        LoIB = opt.saturation_lower_limit_target
+
+                        np_fake = fake.cpu().numpy().squeeze() *((UpIB - LoIB)/2) +(UpIB+ LoIB)/2
+
+                         #--------------------------------------
+                        if len(np_fake.shape) == 3:
+                            np_fake = np_fake.transpose(1, 2 ,0)
+
+                        #--------------------------------------
+                        if opt.logscale_target == True:
+                            np_fake = 10**(np_fake)
+
+                        #--------------------------------------
+                        if opt.data_format_input in ["tif", "tiff"]:
+                            pil_image = Image.fromarray(np_fake)
+                            pil_image.save(os.path.join(dir_image_save, name[0] + '_AI.fits'))
+                        elif opt.data_format_input in ["npy"]:
+                            np.save(os.path.join(dir_image_save, name[0] + '_AI.fits'), np_fake, allow_pickle=True)
+                        elif opt.data_format_input in ["fits", "fts"]:       
+                            fits.writeto(os.path.join(dir_image_save, name[0] + '_AI.fits'), np_fake)
+                        else:
+                            NotImplementedError("Please check data_format_target option. It has to be fit or npy or fits.")
 
 #------------------------------------------------------------------------------
 
