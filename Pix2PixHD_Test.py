@@ -46,7 +46,7 @@ if __name__ == '__main__':
     
     if (iters == False) or (iters == -1) :
         
-        dir_model = './checkpoints/{}/Model/*_G.pt'.format(str(STD)
+        dir_model = './checkpoints/{}/Model/*_G.pt'.format(str(STD))
         ITERATIONs = [os.path.basename(x).split('_')[0] for x in sorted(glob(dir_model))]
 
         for ITERATION in ITERATIONs:
