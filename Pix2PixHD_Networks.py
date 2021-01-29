@@ -160,7 +160,6 @@ class Loss(object):
         for i in range(self.n_D):
             real_grid = get_grid(real_features[i][-1], is_real=True).to(self.device, self.dtype)
             fake_grid = get_grid(fake_features[i][-1], is_real=False).to(self.device, self.dtype)
-            # it doesn't need to be fake_features
 
             loss_D += (self.criterion(real_features[i][-1], real_grid) +
                        self.criterion(fake_features[i][-1], fake_grid)) * 0.5
