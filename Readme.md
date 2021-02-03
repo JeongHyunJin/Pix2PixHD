@@ -255,7 +255,7 @@ In a discriminator, features that are passed through the convolution layers are 
 
 * The loss configuration of the objective functions   
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total loss = ( cGAN loss ) + ( lambda_FM ) * ( Feature Matching loss )   <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total loss = ( LSGAN loss ) + ( lambda_FM ) * ( Feature Matching loss )   <br/>
 
       # hyperparameters in TrainOption class
       --lambda_FM: 10 (default)
