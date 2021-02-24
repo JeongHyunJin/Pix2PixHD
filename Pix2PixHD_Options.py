@@ -55,8 +55,12 @@ class BaseOption(object):
         self.parser.add_argument('--batch_size', type=int, default=1, help='the number of batch_size')
         self.parser.add_argument('--data_type', type=int, default=32, help='float dtype')
         self.parser.add_argument('--image_mode', type=str, default='png', help='extension for saving image')
+        
+        # network option
+        self.parser.add_argument('--n_gf', type=int, default=64, help='the number of channels in the first layer of G')
         self.parser.add_argument('--n_downsample', type=int, default=4, help='how many times you want to downsample input data in G')
         self.parser.add_argument('--n_residual', type=int, default=9, help='the number of residual blocks in G')
+        self.parser.add_argument('--n_df', type=int, default=64, help='the number of channels in the first layer of D')
         self.parser.add_argument('--n_D', type=int, default=2, help='how many discriminators in differet scales you want to use')
         
         self.parser.add_argument('--n_workers', type=int, default=1, help='how many threads you want to use')
@@ -77,9 +81,6 @@ class BaseOption(object):
         opt = self.parser.parse_args()
         opt.format = 'png'  # extension for checking image 
         opt.flip = False
-        
-        opt.n_df = 64
-        opt.n_gf = 64
                     
         #--------------------------------
         if opt.data_type == 16:
