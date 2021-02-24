@@ -239,7 +239,7 @@ To ensure an enough number of learnable parameters, the residual blocks are plac
 **Discriminator** 
 
 The discriminator is a classifier that consists of several convolution layers and the pix2pixHD uses more than one discriminator.
-In a discriminator, features that are passed through the convolution layers are fed into a single sigmoid output in order to produce a probability output in the range of 0 (fake) to 1 (real).
+In a discriminator, features are passed through the convolution layers and derived as a probability in the range of 0 (fake) to 1 (real) at the end.
 
 <br/>
 
