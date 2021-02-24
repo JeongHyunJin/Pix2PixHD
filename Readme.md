@@ -249,7 +249,17 @@ In a discriminator, features are passed through the convolution layers and deriv
      --n_D: 2 (default)
 
 <br/>
-(When the GPU memory is not enough, you can try reducing the number of channels.
+<br/>
+
+When the GPU memory is not enough, you can try reducing the number of channels in the first layer of networks. (e.g. --n_gf 32 --n_df 32)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of channels in the first layer of generator: n_gf <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of channels in the first layer of discriminator: n_df <br/>
+
+     # network option in BaseOption class
+     --n_gf: 64 (default)
+     --n_df: 64 (default)
+        
 <br/>
 <br/>
 
