@@ -229,7 +229,7 @@ To ensure an enough number of learnable parameters, the residual blocks are plac
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of downsampling in the encoder of the generator : n_downsample <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of residual blocks in the generator : n_residual <br/>
 
-      # data augmentation in BaseOption class
+      # network option in BaseOption class
      --n_downsample: 4 (default)
      --n_residual: 9 (default)
 
@@ -245,9 +245,11 @@ In a discriminator, features are passed through the convolution layers and deriv
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of discriminator: n_D <br/>
 
-     # data augmentation in BaseOption class
+     # network option in BaseOption class
      --n_D: 2 (default)
 
+<br/>
+(When the GPU memory is not enough, you can try reducing the number of channels.
 <br/>
 <br/>
 
