@@ -140,8 +140,8 @@ Getting Started
     --data_size 256 \
     --input_dir_train 'D:/Train_input' \
     --target_dir_train 'D:/Train_output' \
-    --batch_size 64 \
     --norm_type 'BatchNorm2d' \
+    --batch_size 64 \
     --save_freq 100 \
     --n_epochs 100
     
@@ -185,6 +185,7 @@ Getting Started
     --dataset_name 'Map2Sim' \
     --data_size 256 \
     --input_dir_test 'D:/Test_input' \
+    --norm_type 'BatchNorm2d' \
     --batch_size 64 \
     --save_freq 100 \
     --n_epochs 100
