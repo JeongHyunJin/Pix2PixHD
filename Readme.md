@@ -141,6 +141,7 @@ Getting Started
     --input_dir_train 'D:/Train_input' \
     --target_dir_train 'D:/Train_output' \
     --batch_size 64 \
+    --norm_type 'BatchNorm2d' \
     --save_freq 100 \
     --n_epochs 100
     
