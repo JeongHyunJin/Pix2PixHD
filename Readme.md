@@ -304,7 +304,7 @@ Citation
 ===============
 
 If you use this code in your work, please consider citing our [paper](https://iopscience.iop.org/article/10.3847/2041-8213/abc255). ([arXiv preprint](https://arxiv.org/abs/2010.07553)) 
-This code is modified code from the baseline Pix2PixHD code of Wang et al. (2018) and developed to generate scientific outputs for solar physics research.
+This code is modified code from the baseline Pix2PixHD code of Wang et al. (2018) and developed to generate scientific outputs for research on the physics of the Sun.
 
     @article{jeong2020solar,
     title={Solar coronal magnetic field extrapolation from synchronic data with AI-generated farside},
