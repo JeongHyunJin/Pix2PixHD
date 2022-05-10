@@ -1,7 +1,7 @@
 Pix2PixHD model
 ===============
  Pix2PixHD is one of the popular deep-learning methods for image translation of high-resolution images without significant artifacts. <br/>
-Here, we have modifed the code of the Pix2PixHD to use scientific datasets which have extensions of .tif (.tiff) or .npy or .fits (.fts, .fit). 
+Here we have modifed the code of the Pix2PixHD to use scientific datasets which have extensions of .tif (.tiff) or .npy or .fits (.fts, .fit). 
 
 * References <br/>
     Baseline of the Pix2PixHD model: [Wang et al. 2018](https://arxiv.org/abs/1711.11585) ([GitHub](https://github.com/NVIDIA/pix2pixHD)) <br/>
