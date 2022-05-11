@@ -300,8 +300,6 @@ When the GPU memory is not enough, you can try reducing the number of channels i
 
 <br/>
 
-_____________  
-
 Citation
 ===============
 
@@ -320,6 +318,4 @@ This code is modified based on the Pix2PixHD baseline codes of the Wang et al. (
     }
 
 <br/>
-
-_____________  
 
