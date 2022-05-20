@@ -25,9 +25,9 @@ class BaseOption(object):
 
         self.parser.add_argument('--gpu_ids', type=int, default=0, help='gpu number. If -1, use cpu')
         self.parser.add_argument('--data_format_input', type=str, default='tif',
-                                 help="Input data extension. This will be used for loading and saving. [tif or npy or fits]")
+                                 help="Input data extension. This will be used for loading and saving. [tif, png, jpg or npy or fits]")
         self.parser.add_argument('--data_format_target', type=str, default='tif',
-                                 help="Target data extension. This will be used for loading and saving. [fits or npy or fits]")
+                                 help="Target data extension. This will be used for loading and saving. [tif, png, jpg or npy or fits]")
         
         #----------------------------------------------------------------------
         # data option
