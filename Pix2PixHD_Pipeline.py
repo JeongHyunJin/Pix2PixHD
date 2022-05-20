@@ -61,12 +61,12 @@ class CustomDataset(Dataset):
             self.offset_y = randint(0, 2 * self.opt.padding_size - 1) if self.opt.padding_size > 0 else 0
             
 # [ Train Input ] =============================================================
-            if self.input_format in ["tif", "tiff"]:
-                IMG_A0 = np.array(Image.open(self.label_path_list[index]))
+            if self.input_format in ["tif", "tiff", "png", "jpg", "jpeg"]:
+                IMG_A0 = np.array(Image.open(self.label_path_list[index]), dtype=np.float32)
             elif self.input_format in ["npy"]:
                 IMG_A0 = np.load(self.label_path_list[index], allow_pickle=True)
             elif self.input_format in ["fits", "fts", "fit"]:
-                IMG_A0 = np.array(fits.open(self.label_path_list[index])[0].data)
+                IMG_A0 = np.array(fits.open(self.label_path_list[index])[0].data, dtype=np.float32)
             else:
                 NotImplementedError("Please check data_format_input option. It has to be tif or npy or fits.")
             
@@ -105,12 +105,12 @@ class CustomDataset(Dataset):
             
                 
 # [ Train Target ] ============================================================
-            if self.input_format in ["tif", "tiff"]:
-                IMG_B0 = np.array(Image.open(self.target_path_list[index]))
+            if self.input_format in ["tif", "tiff", "png", "jpg", "jpeg"]:
+                IMG_B0 = np.array(Image.open(self.target_path_list[index]), dtype=np.float32)
             elif self.target_format in ["npy"]:
                 IMG_B0 = np.load(self.target_path_list[index], allow_pickle=True)
             elif self.target_format in ["fits", "fts", "fit"]:
-                IMG_B0 = np.array(fits.open(self.target_path_list[index])[0].data)
+                IMG_B0 = np.array(fits.open(self.target_path_list[index])[0].data, dtype=np.float32)
             else:
                 NotImplementedError("Please check data_format_target option. It has to be tif or npy or fits.")
             
@@ -151,12 +151,12 @@ class CustomDataset(Dataset):
 # [ Test data ] ===============================================================
         else:
 # [ Test Input ] ==============================================================
-            if self.input_format in ["tif", "tiff"]:
-                IMG_A0 = np.array(Image.open(self.label_path_list[index]))       
+            if self.input_format in ["tif", "tiff", "png", "jpg", "jpeg"]:
+                IMG_A0 = np.array(Image.open(self.label_path_list[index]), dtype=np.float32)       
             elif self.input_format in ["npy"]:
                 IMG_A0 = np.load(self.label_path_list[index], allow_pickle=True)
             elif self.input_format in ["fits", "fts", "fit"]:                    
-                IMG_A0 = np.array(fits.open(self.label_path_list[index])[0].data)
+                IMG_A0 = np.array(fits.open(self.label_path_list[index])[0].data, dtype=np.float32)
             else:
                 NotImplementedError("Please check data_format_input option. It has to be tif or npy or fits.")
             
