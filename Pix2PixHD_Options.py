@@ -41,10 +41,10 @@ class BaseOption(object):
         self.parser.add_argument('--logscale_input', type=bool, default=False, help='use logarithmic scales to the input data sets')
         self.parser.add_argument('--logscale_target', type=bool, default=False, help="use logarithmic scales to the target data sets")
         
-        self.parser.add_argument('--saturation_lower_limit_input', type=float, default=-1, help="Saturation value (lower limit) of input")
-        self.parser.add_argument('--saturation_upper_limit_input', type=float, default=1, help="Saturation value (upper limit) of input")
-        self.parser.add_argument('--saturation_lower_limit_target', type=float, default=-1, help="Saturation value (lower limit) of target")
-        self.parser.add_argument('--saturation_upper_limit_target', type=float, default=1, help="Saturation value (upper limit) of target")
+        self.parser.add_argument('--saturation_lower_limit_input', type=float, default=0, help="Saturation value (lower limit) of input")
+        self.parser.add_argument('--saturation_upper_limit_input', type=float, default=255, help="Saturation value (upper limit) of input")
+        self.parser.add_argument('--saturation_lower_limit_target', type=float, default=0, help="Saturation value (lower limit) of target")
+        self.parser.add_argument('--saturation_upper_limit_target', type=float, default=255, help="Saturation value (upper limit) of target")
         
         self.parser.add_argument('--saturation_clip_input', type=bool, default=True, help="Saturation clip for input data")
         self.parser.add_argument('--saturation_clip_target', type=bool, default=True, help="Saturation clip for target data")
