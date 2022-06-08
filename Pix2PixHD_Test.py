@@ -75,8 +75,8 @@ if __name__ == '__main__':
                         LoIB = opt.saturation_lower_limit_target
 
                         np_fake = fake.cpu().numpy().squeeze() *((UpIB - LoIB)/2) +(UpIB+ LoIB)/2
-                         if opt.saturation_clip_target == True:
-                            label_array = np.clip(IMG_A0, LoIA, UpIA)
+                        if opt.saturation_clip_target == True:
+                            np_fake = np.clip(np_fake, LoIB, UpIB)
                         
                          #--------------------------------------
                         if len(np_fake.shape) == 3:
@@ -123,7 +123,7 @@ if __name__ == '__main__':
                 
                 np_fake = fake.cpu().numpy().squeeze() *((UpIB - LoIB)/2) +(UpIB+ LoIB)/2
                 if opt.saturation_clip_target == True:
-                            label_array = np.clip(IMG_A0, LoIA, UpIA)
+                    np_fake = np.clip(np_fake, LoIB, UpIB)
                         
                 #--------------------------------------
                 if len(np_fake.shape) == 3:
