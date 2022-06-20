@@ -168,7 +168,10 @@ class CustomDataset(Dataset):
             UpIA = np.float(self.opt.saturation_upper_limit_input)
             LoIA = np.float(self.opt.saturation_lower_limit_input)
             
-            label_array = (np.clip(IMG_A0, LoIA, UpIA)-(UpIA+LoIA)/2)/((UpIA - LoIA)/2)
+            if self.opt.saturation_clip_input == True:
+                label_array = (np.clip(IMG_A0, LoIA, UpIA)-(UpIA+LoIA)/2)/((UpIA - LoIA)/2)
+            else:
+                label_array = (IMG_A0-(UpIA+LoIA)/2)/((UpIA - LoIA)/2)
             
             #--------------------------------------
             if self.opt.logscale_input == True:
