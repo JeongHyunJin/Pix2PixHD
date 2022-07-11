@@ -15,24 +15,26 @@ Reference:
 #------------------------------------------------------------------------------
 # [1] Initial Conditions Setup
 
-if __name__ == '__main__':
-    import os
-    from glob import glob
-    import torch
-    import numpy as np
-    from Pix2PixHD_Options import TestOption
-    from Pix2PixHD_Pipeline import CustomDataset
-    from Pix2PixHD_Networks import Generator
-    from Pix2PixHD_Utils import Manager
-    from torch.utils.data import DataLoader
-    from tqdm import tqdm
-    from astropy.io import fits
-    from PIL import Image
+from Pix2PixHD_Options import TestOption
+opt = TestOption().parse()
 
-    torch.backends.cudnn.benchmark = True
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = str(opt.gpu_ids)
+
+from glob import glob
+import torch
+import numpy as np
+from Pix2PixHD_Pipeline import CustomDataset
+from Pix2PixHD_Networks import Generator
+from Pix2PixHD_Utils import Manager
+from torch.utils.data import DataLoader
+from tqdm import tqdm
+from astropy.io import fits
+from PIL import Image
+
+if __name__ == '__main__':
     
-    opt = TestOption().parse()
-    os.environ['CUDA_VISIBLE_DEVICES'] = str(opt.gpu_ids)
+    torch.backends.cudnn.benchmark = True
     device = torch.device('cuda:0')
     
     STD = opt.dataset_name
