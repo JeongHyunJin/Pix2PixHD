@@ -18,6 +18,7 @@ from Pix2PixHD_Options import TrainOption
 opt = TrainOption().parse()
 
 import os
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ['CUDA_VISIBLE_DEVICES'] = str(opt.gpu_ids)
 #------------------------------------------------------------------------------
 
