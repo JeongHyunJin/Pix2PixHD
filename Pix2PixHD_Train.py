@@ -14,29 +14,28 @@ Reference:
 
 #------------------------------------------------------------------------------
 
+import os
+import torch
+from torch.utils.data import DataLoader
+from Pix2PixHD_Networks import Discriminator, Generator, Loss
+from Pix2PixHD_Options import TrainOption
+from Pix2PixHD_Pipeline import CustomDataset
+from Pix2PixHD_Utils import Manager, update_lr, weights_init
+from tqdm import tqdm
+import numpy as np
+import datetime        
+
+opt = TrainOption().parse()
+torch.backends.cudnn.benchmark = True
+device = torch.device('cuda:0' )
+os.environ['CUDA_VISIBLE_DEVICES'] = str(opt.gpu_ids)
+
 if __name__ == '__main__':
-
-    import os
-    import torch
-    from torch.utils.data import DataLoader
-    from Pix2PixHD_Networks import Discriminator, Generator, Loss
-    from Pix2PixHD_Options import TrainOption
-    from Pix2PixHD_Pipeline import CustomDataset
-    from Pix2PixHD_Utils import Manager, update_lr, weights_init
-    from tqdm import tqdm
-    import numpy as np
-    import datetime        
-
     start_time = datetime.datetime.now()
 
 #------------------------------------------------------------------------------
 # [1] Initial Conditions Setup
     
-    torch.backends.cudnn.benchmark = True
-
-    opt = TrainOption().parse()
-    os.environ['CUDA_VISIBLE_DEVICES'] = str(opt.gpu_ids)
-    device = torch.device('cuda:0' )
     dtype = torch.float16 if opt.data_type == 16 else torch.float32
 
     if opt.val_during_train:
